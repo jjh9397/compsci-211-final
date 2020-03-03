@@ -195,8 +195,8 @@ CMakeFiles/main.dir/clean:
 # Target rules for target CMakeFiles/model_test.dir
 
 # All Build rule for target.
-CMakeFiles/model_test.dir/all: .cs211/lib/ge211/CMakeFiles/ge211.dir/all
 CMakeFiles/model_test.dir/all: .cs211/lib/catch/CMakeFiles/catch.dir/all
+CMakeFiles/model_test.dir/all: .cs211/lib/ge211/CMakeFiles/ge211.dir/all
 	$(MAKE) -f CMakeFiles\model_test.dir\build.make CMakeFiles/model_test.dir/depend
 	$(MAKE) -f CMakeFiles\model_test.dir\build.make CMakeFiles/model_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\build\CMakeFiles --progress-num=22,23,24 "Built target model_test"
