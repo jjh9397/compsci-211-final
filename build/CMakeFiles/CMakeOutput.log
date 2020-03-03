@@ -276,3 +276,55 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_d6401/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_d6401.dir\build.make CMakeFiles/cmTC_d6401.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d6401.dir/CheckIncludeFile.cxx.obj
+C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_d6401.dir\CheckIncludeFile.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\build\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+Linking CXX executable cmTC_d6401.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d6401.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_d6401.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_d6401.dir/objects.a @CMakeFiles\cmTC_d6401.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_d6401.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d6401.exe -Wl,--out-implib,libcmTC_d6401.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_d6401.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_9bb1f/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_9bb1f.dir\build.make CMakeFiles/cmTC_9bb1f.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9bb1f.dir/src.cxx.obj
+C:\MinGW\bin\g++.exe    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_9bb1f.dir\src.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\build\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_9bb1f.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_9bb1f.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_9bb1f.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_9bb1f.dir/objects.a @CMakeFiles\cmTC_9bb1f.dir\objects1.rsp
+C:\MinGW\bin\g++.exe  -DCMAKE_HAVE_LIBC_PTHREAD    -Wl,--whole-archive CMakeFiles\cmTC_9bb1f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_9bb1f.exe -Wl,--out-implib,libcmTC_9bb1f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_9bb1f.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
