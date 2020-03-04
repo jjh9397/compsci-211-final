@@ -6,7 +6,7 @@
 class Player
 {
     public:
-    explicit Player(ge211::Position, ge211::Position)
+    explicit Player(ge211::Position, ge211::Position);
 
     void hitbox_next();
     void hurtbox_next();

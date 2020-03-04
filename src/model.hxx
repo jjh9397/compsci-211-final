@@ -48,7 +48,7 @@ public:
 private:
 
     friend struct Test_access;
-    Player winner_ = Player::neither;
+    int winner_ = 0;
     Player player1_;
     Player player2_;
 
