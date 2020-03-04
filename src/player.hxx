@@ -5,7 +5,7 @@
 
 class Player
 {
-    public:
+public:
     explicit Player(ge211::Position, ge211::Position);
 
     void hitbox_next();
@@ -13,7 +13,7 @@ class Player
     void hits_side();
     void collides(Player);
 
-    private:
+private:
     ge211::Rectangle hitbox;
     ge211::Rectangle hurtbox;
     bool blocking;

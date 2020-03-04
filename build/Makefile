@@ -248,6 +248,33 @@ fireworks/fast:
 	$(MAKE) -f .cs211\lib\ge211\examples\installed\CMakeFiles\fireworks.dir\build.make .cs211/lib/ge211/examples/installed/CMakeFiles/fireworks.dir/build
 .PHONY : fireworks/fast
 
+src/controller.obj: src/controller.cxx.obj
+
+.PHONY : src/controller.obj
+
+# target to build an object file
+src/controller.cxx.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/controller.cxx.obj
+.PHONY : src/controller.cxx.obj
+
+src/controller.i: src/controller.cxx.i
+
+.PHONY : src/controller.i
+
+# target to preprocess a source file
+src/controller.cxx.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/controller.cxx.i
+.PHONY : src/controller.cxx.i
+
+src/controller.s: src/controller.cxx.s
+
+.PHONY : src/controller.s
+
+# target to generate assembly for a file
+src/controller.cxx.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/controller.cxx.s
+.PHONY : src/controller.cxx.s
+
 src/main.obj: src/main.cxx.obj
 
 .PHONY : src/main.obj
@@ -305,6 +332,60 @@ src/model.cxx.s:
 	$(MAKE) -f CMakeFiles\model_test.dir\build.make CMakeFiles/model_test.dir/src/model.cxx.s
 .PHONY : src/model.cxx.s
 
+src/player.obj: src/player.cxx.obj
+
+.PHONY : src/player.obj
+
+# target to build an object file
+src/player.cxx.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/player.cxx.obj
+.PHONY : src/player.cxx.obj
+
+src/player.i: src/player.cxx.i
+
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.cxx.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/player.cxx.i
+.PHONY : src/player.cxx.i
+
+src/player.s: src/player.cxx.s
+
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.cxx.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/player.cxx.s
+.PHONY : src/player.cxx.s
+
+src/view.obj: src/view.cxx.obj
+
+.PHONY : src/view.obj
+
+# target to build an object file
+src/view.cxx.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/view.cxx.obj
+.PHONY : src/view.cxx.obj
+
+src/view.i: src/view.cxx.i
+
+.PHONY : src/view.i
+
+# target to preprocess a source file
+src/view.cxx.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/view.cxx.i
+.PHONY : src/view.cxx.i
+
+src/view.s: src/view.cxx.s
+
+.PHONY : src/view.s
+
+# target to generate assembly for a file
+src/view.cxx.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/view.cxx.s
+.PHONY : src/view.cxx.s
+
 test/model_test.obj: test/model_test.cxx.obj
 
 .PHONY : test/model_test.obj
@@ -350,12 +431,21 @@ help:
 	@echo ... ge211
 	@echo ... main
 	@echo ... model_test
+	@echo ... src/controller.obj
+	@echo ... src/controller.i
+	@echo ... src/controller.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
 	@echo ... src/model.obj
 	@echo ... src/model.i
 	@echo ... src/model.s
+	@echo ... src/player.obj
+	@echo ... src/player.i
+	@echo ... src/player.s
+	@echo ... src/view.obj
+	@echo ... src/view.i
+	@echo ... src/view.s
 	@echo ... test/model_test.obj
 	@echo ... test/model_test.i
 	@echo ... test/model_test.s
