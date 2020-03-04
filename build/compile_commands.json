@@ -6,6 +6,21 @@
 },
 {
   "directory": "C:/Users/Jason/Documents/CS211/compsci-211-final/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/main.dir/includes_CXX.rsp -g   -std=gnu++14 -o CMakeFiles\\main.dir\\src\\controller.cxx.obj -c C:\\Users\\Jason\\Documents\\CS211\\compsci-211-final\\src\\controller.cxx",
+  "file": "C:/Users/Jason/Documents/CS211/compsci-211-final/src/controller.cxx"
+},
+{
+  "directory": "C:/Users/Jason/Documents/CS211/compsci-211-final/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/main.dir/includes_CXX.rsp -g   -std=gnu++14 -o CMakeFiles\\main.dir\\src\\player.cxx.obj -c C:\\Users\\Jason\\Documents\\CS211\\compsci-211-final\\src\\player.cxx",
+  "file": "C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.cxx"
+},
+{
+  "directory": "C:/Users/Jason/Documents/CS211/compsci-211-final/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/main.dir/includes_CXX.rsp -g   -std=gnu++14 -o CMakeFiles\\main.dir\\src\\view.cxx.obj -c C:\\Users\\Jason\\Documents\\CS211\\compsci-211-final\\src\\view.cxx",
+  "file": "C:/Users/Jason/Documents/CS211/compsci-211-final/src/view.cxx"
+},
+{
+  "directory": "C:/Users/Jason/Documents/CS211/compsci-211-final/build",
   "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/main.dir/includes_CXX.rsp -g   -std=gnu++14 -o CMakeFiles\\main.dir\\src\\model.cxx.obj -c C:\\Users\\Jason\\Documents\\CS211\\compsci-211-final\\src\\model.cxx",
   "file": "C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.cxx"
 },
