@@ -4,8 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Jason/Documents/CS211/compsci-211-final/src/controller.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/main.dir/src/controller.cxx.obj"
   "C:/Users/Jason/Documents/CS211/compsci-211-final/src/main.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/main.dir/src/main.cxx.obj"
   "C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/main.dir/src/model.cxx.obj"
+  "C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/main.dir/src/player.cxx.obj"
+  "C:/Users/Jason/Documents/CS211/compsci-211-final/src/view.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/build/CMakeFiles/main.dir/src/view.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

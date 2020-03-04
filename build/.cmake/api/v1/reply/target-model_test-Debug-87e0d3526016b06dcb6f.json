@@ -33,7 +33,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 15,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
@@ -57,7 +57,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 18,
+				"line" : 21,
 				"parent" : 0
 			},
 			{
@@ -123,12 +123,12 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 5,
-			"id" : "ge211::@76344aa5873e0bc59768"
-		},
-		{
 			"backtrace" : 4,
 			"id" : "catch::@be6f5491b685a53c462d"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ge211::@76344aa5873e0bc59768"
 		}
 	],
 	"id" : "model_test::@6890427a1f51a3e7e1df",
