@@ -6,10 +6,10 @@
 class Player
 {
 public:
-    explicit Player(ge211::Position, ge211::Position);
+    explicit Player(ge211::Position, ge211::Position, ge211::Dimensions);
 
-    void hitbox_next();
-    void hurtbox_next();
+    ge211::Position hitbox_next();
+    ge211::Position hurtbox_next();
     void hits_side();
     void collides(Player);
 
@@ -18,9 +18,10 @@ private:
     ge211::Rectangle hurtbox;
     bool blocking;
     bool active;
-    ge211::Position hitbox_velocity;
-    ge211::Position hurtbox_velocity;
+    ge211::Dimensions hitbox_velocity;
+    ge211::Dimensions hurtbox_velocity;
     int health;
+    ge211::Dimensions facing;
 
     friend struct Test_access;
 };
