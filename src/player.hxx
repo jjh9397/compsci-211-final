@@ -20,6 +20,7 @@ private:
     bool active;
     ge211::Dimensions hitbox_velocity;
     ge211::Dimensions hurtbox_velocity;
+    ge211::Dimensions hurtbox_angular_velocity;
     int health;
     ge211::Dimensions facing;
 
