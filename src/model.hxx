@@ -30,8 +30,12 @@ public:
     // makes the 1st player go into a state of blocking
     void p1_block();
 
+    void p1_stops_block();
+
     // makes the 2nd player go into a state of blocking
     void p2_block();
+
+    void p2_stops_block();
 
     // checks if either player has 0 health and makes the game over with the helper if it returns true
     bool health_check();
@@ -40,17 +44,17 @@ public:
     void check_collision();
 
     // gets the health of the 1st player
-    int check_p1_health();
+    int get_p1_health();
 
     // gets the health of the 2nd player
-    int check_p2_health();
+    int get_p2_health();
 
 private:
 
     friend struct Test_access;
     int winner_ = 0;
-    Player player1_;
-    Player player2_;
+    Player p1_;
+    Player p2_;
 
     // declares winner and resets the game to original positions
     void game_over();
