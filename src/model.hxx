@@ -49,6 +49,8 @@ public:
     // gets the health of the 2nd player
     int get_p2_health();
 
+    void update(double dt);
+
 private:
 
     friend struct Test_access;
