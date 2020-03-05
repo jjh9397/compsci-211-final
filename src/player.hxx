@@ -12,17 +12,22 @@ public:
     ge211::Position hurtbox_next();
     void hits_side();
     void collides(Player);
+    bool recovered();
 
 private:
     ge211::Rectangle hitbox;
     ge211::Rectangle hurtbox;
-    bool blocking;
-    bool active;
     ge211::Dimensions hitbox_velocity;
     ge211::Dimensions hurtbox_velocity;
     ge211::Dimensions hurtbox_angular_velocity;
-    int health;
     ge211::Dimensions facing;
+    
+    bool blocking;
+    bool active;
+    
+    int health;
+    int recovery;
+    
 
     friend struct Test_access;
 };
