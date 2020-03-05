@@ -84,24 +84,10 @@ CMakeFiles/main.dir/src/controller.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/controller.cxx.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jason\Documents\CS211\compsci-211-final\src\controller.cxx -o CMakeFiles\main.dir\src\controller.cxx.s
 
-CMakeFiles/main.dir/src/player.cxx.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/player.cxx.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/src/player.cxx.obj: ../src/player.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/player.cxx.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\src\player.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx
-
-CMakeFiles/main.dir/src/player.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/player.cxx.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx > CMakeFiles\main.dir\src\player.cxx.i
-
-CMakeFiles/main.dir/src/player.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/player.cxx.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx -o CMakeFiles\main.dir\src\player.cxx.s
-
 CMakeFiles/main.dir/src/view.cxx.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/view.cxx.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/view.cxx.obj: ../src/view.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/view.cxx.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/view.cxx.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\src\view.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\src\view.cxx
 
 CMakeFiles/main.dir/src/view.cxx.i: cmake_force
@@ -111,6 +97,20 @@ CMakeFiles/main.dir/src/view.cxx.i: cmake_force
 CMakeFiles/main.dir/src/view.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/view.cxx.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jason\Documents\CS211\compsci-211-final\src\view.cxx -o CMakeFiles\main.dir\src\view.cxx.s
+
+CMakeFiles/main.dir/src/player.cxx.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/player.cxx.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/player.cxx.obj: ../src/player.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/player.cxx.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\src\player.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx
+
+CMakeFiles/main.dir/src/player.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/player.cxx.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx > CMakeFiles\main.dir\src\player.cxx.i
+
+CMakeFiles/main.dir/src/player.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/player.cxx.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx -o CMakeFiles\main.dir\src\player.cxx.s
 
 CMakeFiles/main.dir/src/model.cxx.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/model.cxx.obj: CMakeFiles/main.dir/includes_CXX.rsp
@@ -130,8 +130,8 @@ CMakeFiles/main.dir/src/model.cxx.s: cmake_force
 main_OBJECTS = \
 "CMakeFiles/main.dir/src/main.cxx.obj" \
 "CMakeFiles/main.dir/src/controller.cxx.obj" \
-"CMakeFiles/main.dir/src/player.cxx.obj" \
 "CMakeFiles/main.dir/src/view.cxx.obj" \
+"CMakeFiles/main.dir/src/player.cxx.obj" \
 "CMakeFiles/main.dir/src/model.cxx.obj"
 
 # External object files for target main
@@ -139,8 +139,8 @@ main_EXTERNAL_OBJECTS =
 
 main.exe: CMakeFiles/main.dir/src/main.cxx.obj
 main.exe: CMakeFiles/main.dir/src/controller.cxx.obj
-main.exe: CMakeFiles/main.dir/src/player.cxx.obj
 main.exe: CMakeFiles/main.dir/src/view.cxx.obj
+main.exe: CMakeFiles/main.dir/src/player.cxx.obj
 main.exe: CMakeFiles/main.dir/src/model.cxx.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: .cs211/lib/ge211/libge211.a

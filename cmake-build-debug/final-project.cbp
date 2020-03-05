@@ -411,9 +411,11 @@
 		</Unit>
 		<Unit filename="C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.cxx">
 			<Option target="main"/>
+			<Option target="model_test"/>
 		</Unit>
 		<Unit filename="C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.hxx">
 			<Option target="main"/>
+			<Option target="model_test"/>
 		</Unit>
 		<Unit filename="C:/Users/Jason/Documents/CS211/compsci-211-final/src/view.cxx">
 			<Option target="main"/>

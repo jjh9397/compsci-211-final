@@ -62,3 +62,8 @@ int Model::get_p2_health()
 {
     return p2_.get_health();
 }
+
+void Model::update(double dt)
+{
+    
+}
