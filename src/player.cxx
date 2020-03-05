@@ -28,3 +28,8 @@ ge211::Position Player::hurtbox_next()
     result += hurtbox_velocity;
     return result;
 }
+
+bool Player::recovered()
+{
+    return recovery == 0;
+}
