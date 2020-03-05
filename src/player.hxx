@@ -10,8 +10,8 @@ public:
 
     ge211::Position hitbox_next();
     ge211::Position hurtbox_next();
-    void hits_side();
-    void collides(Player);
+    bool hits_side();
+    bool hits_bottom();
     bool recovered();
 
 private:
