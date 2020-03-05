@@ -11,7 +11,6 @@ add_program(main
     src/main.cxx
     # LIST ADDITIONAL NON-MODEL (UI) .cxx FILES HERE:
         src/controller.cxx
-        src/player.cxx
         src/view.cxx
     ${MODEL_SRC})
 target_link_libraries(main ge211)

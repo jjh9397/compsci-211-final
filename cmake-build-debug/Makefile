@@ -322,6 +322,7 @@ src/player.obj: src/player.cxx.obj
 # target to build an object file
 src/player.cxx.obj:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/player.cxx.obj
+	$(MAKE) -f CMakeFiles\model_test.dir\build.make CMakeFiles/model_test.dir/src/player.cxx.obj
 .PHONY : src/player.cxx.obj
 
 src/player.i: src/player.cxx.i
@@ -331,6 +332,7 @@ src/player.i: src/player.cxx.i
 # target to preprocess a source file
 src/player.cxx.i:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/player.cxx.i
+	$(MAKE) -f CMakeFiles\model_test.dir\build.make CMakeFiles/model_test.dir/src/player.cxx.i
 .PHONY : src/player.cxx.i
 
 src/player.s: src/player.cxx.s
@@ -340,6 +342,7 @@ src/player.s: src/player.cxx.s
 # target to generate assembly for a file
 src/player.cxx.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/player.cxx.s
+	$(MAKE) -f CMakeFiles\model_test.dir\build.make CMakeFiles/model_test.dir/src/player.cxx.s
 .PHONY : src/player.cxx.s
 
 src/view.obj: src/view.cxx.obj
