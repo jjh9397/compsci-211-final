@@ -31,6 +31,11 @@
 },
 {
   "directory": "C:/Users/Jason/Documents/CS211/compsci-211-final/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/model_test.dir/includes_CXX.rsp -g   -std=gnu++14 -o CMakeFiles\\model_test.dir\\src\\player.cxx.obj -c C:\\Users\\Jason\\Documents\\CS211\\compsci-211-final\\src\\player.cxx",
+  "file": "C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.cxx"
+},
+{
+  "directory": "C:/Users/Jason/Documents/CS211/compsci-211-final/build",
   "command": "C:\\MinGW\\bin\\g++.exe   @CMakeFiles/model_test.dir/includes_CXX.rsp -g   -std=gnu++14 -o CMakeFiles\\model_test.dir\\src\\model.cxx.obj -c C:\\Users\\Jason\\Documents\\CS211\\compsci-211-final\\src\\model.cxx",
   "file": "C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.cxx"
 },

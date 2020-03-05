@@ -1,0 +1,209 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : ".cs211/lib/catch",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : ".cs211/lib/catch",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : ".cs211/lib/ge211",
+					"childIndexes" : 
+					[
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : ".cs211/lib/ge211",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : ".cs211/lib/ge211/3rdparty/utf8-cpp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : ".cs211/lib/ge211/3rdparty/utf8-cpp"
+				},
+				{
+					"build" : ".cs211/lib/ge211/examples/installed",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : ".cs211/lib/ge211/examples/installed",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "final-project",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Catch2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ge211",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "utf8-cpp",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ge211_examples",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "catch::@be6f5491b685a53c462d",
+					"jsonFile" : "target-catch-Debug-770a9aa98df2b21c45b2.json",
+					"name" : "catch",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "fireworks::@66d27fb37db0f71dd4bb",
+					"jsonFile" : "target-fireworks-Debug-3d46454c785932ac3cb3.json",
+					"name" : "fireworks",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ge211::@76344aa5873e0bc59768",
+					"jsonFile" : "target-ge211-Debug-fb8e8dc09a44f0ce612c.json",
+					"name" : "ge211",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-43e6f906c54076967717.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "model_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-model_test-Debug-9c893a5b940013d34392.json",
+					"name" : "model_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Jason/Documents/CS211/compsci-211-final/build",
+		"source" : "C:/Users/Jason/Documents/CS211/compsci-211-final"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
