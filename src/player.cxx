@@ -33,3 +33,27 @@ bool Player::recovered()
 {
     return recovery == 0;
 }
+
+bool Player::hits_side()
+{
+    if (hitbox.top_left().x < 0 || hitbox.top_left().right_by(hitbox.width).x > 1280)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Player::hits_bottom()
+{
+    if (hitbox.top_left().down_by(hitbox.height).y < 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
