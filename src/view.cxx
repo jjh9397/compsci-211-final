@@ -9,3 +9,12 @@ View::View(Model const &model)
     , p1(ge211::Position(400,20), ge211::Position(400,20), ge211::Dimensions({1,0}))
     , p2(ge211::Position(400,20), ge211::Position(400,20), ge211::Dimensions({-1,0}))
 {}
+
+ge211::Dimensions View::initial_window_dimensions() const
+{
+    return {1280, 720};
+}
+
+std::string View::initial_window_title() const {
+    return "Grabble Versus 2";
+}

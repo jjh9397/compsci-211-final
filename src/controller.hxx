@@ -5,7 +5,7 @@
 class Controller : public ge211::Abstract_game
 {
 public:
-    explicit Controller();
+    explicit Controller(Player p1, Player p2);
 
 protected:
     void draw(ge211::Sprite_set&) override;
