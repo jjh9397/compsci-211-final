@@ -340,11 +340,13 @@ C:/MinGW/include/SDL2/begin_code.h
 
 C:/MinGW/include/SDL2/close_code.h
 
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/main.cxx
-model.hxx
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.hxx
-
 C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.cxx
+iostream
+-
+player.hxx
+C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.hxx
+ge211.hxx
+-
 model.hxx
 C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.hxx
 
@@ -356,31 +358,9 @@ C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.hxx
 ge211.hxx
 -
 
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.cxx
-iostream
--
-player.hxx
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.hxx
-ge211.hxx
--
-
 C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.hxx
 iostream
 -
-ge211.hxx
--
-
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/view.cxx
-model.hxx
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.hxx
-ge211.hxx
--
-view.hxx
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/view.hxx
-
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/view.hxx
-model.hxx
-C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.hxx
 ge211.hxx
 -
 

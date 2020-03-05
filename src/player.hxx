@@ -34,6 +34,8 @@ public:
     void set_direction(ge211::Dimensions);
     ge211::Dimensions get_direction();
 
+    void set_blocking(bool);
+    bool get_blocking();
 
 private:
     ge211::Rectangle hitbox;

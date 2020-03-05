@@ -12,6 +12,7 @@ add_program(main
         src/controller.cxx
         src/player.cxx
         src/view.cxx
+        src/model.cxx
     ${MODEL_SRC})
 target_link_libraries(main ge211)
 

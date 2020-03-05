@@ -121,3 +121,13 @@ ge211::Dimensions Player::get_direction()
 {
     return direction;
 }
+
+void Player::set_blocking(bool block)
+{
+    blocking = block;
+}
+
+bool Player::get_blocking()
+{
+    return blocking;
+}
