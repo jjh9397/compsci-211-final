@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Jason\Documents\CS211\compsci-211-final
+CMAKE_SOURCE_DIR = C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/model_test.dir/depend.make
@@ -59,44 +59,44 @@ include CMakeFiles/model_test.dir/flags.make
 CMakeFiles/model_test.dir/test/model_test.cxx.obj: CMakeFiles/model_test.dir/flags.make
 CMakeFiles/model_test.dir/test/model_test.cxx.obj: CMakeFiles/model_test.dir/includes_CXX.rsp
 CMakeFiles/model_test.dir/test/model_test.cxx.obj: ../test/model_test.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/model_test.dir/test/model_test.cxx.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\model_test.dir\test\model_test.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\test\model_test.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/model_test.dir/test/model_test.cxx.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\model_test.dir\test\model_test.cxx.obj -c C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\test\model_test.cxx
 
 CMakeFiles/model_test.dir/test/model_test.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/test/model_test.cxx.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jason\Documents\CS211\compsci-211-final\test\model_test.cxx > CMakeFiles\model_test.dir\test\model_test.cxx.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\test\model_test.cxx > CMakeFiles\model_test.dir\test\model_test.cxx.i
 
 CMakeFiles/model_test.dir/test/model_test.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/test/model_test.cxx.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jason\Documents\CS211\compsci-211-final\test\model_test.cxx -o CMakeFiles\model_test.dir\test\model_test.cxx.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\test\model_test.cxx -o CMakeFiles\model_test.dir\test\model_test.cxx.s
 
 CMakeFiles/model_test.dir/src/player.cxx.obj: CMakeFiles/model_test.dir/flags.make
 CMakeFiles/model_test.dir/src/player.cxx.obj: CMakeFiles/model_test.dir/includes_CXX.rsp
 CMakeFiles/model_test.dir/src/player.cxx.obj: ../src/player.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/model_test.dir/src/player.cxx.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\model_test.dir\src\player.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/model_test.dir/src/player.cxx.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\model_test.dir\src\player.cxx.obj -c C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\src\player.cxx
 
 CMakeFiles/model_test.dir/src/player.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/src/player.cxx.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx > CMakeFiles\model_test.dir\src\player.cxx.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\src\player.cxx > CMakeFiles\model_test.dir\src\player.cxx.i
 
 CMakeFiles/model_test.dir/src/player.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/src/player.cxx.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jason\Documents\CS211\compsci-211-final\src\player.cxx -o CMakeFiles\model_test.dir\src\player.cxx.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\src\player.cxx -o CMakeFiles\model_test.dir\src\player.cxx.s
 
 CMakeFiles/model_test.dir/src/model.cxx.obj: CMakeFiles/model_test.dir/flags.make
 CMakeFiles/model_test.dir/src/model.cxx.obj: CMakeFiles/model_test.dir/includes_CXX.rsp
 CMakeFiles/model_test.dir/src/model.cxx.obj: ../src/model.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/model_test.dir/src/model.cxx.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\model_test.dir\src\model.cxx.obj -c C:\Users\Jason\Documents\CS211\compsci-211-final\src\model.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/model_test.dir/src/model.cxx.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\model_test.dir\src\model.cxx.obj -c C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\src\model.cxx
 
 CMakeFiles/model_test.dir/src/model.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/model_test.dir/src/model.cxx.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jason\Documents\CS211\compsci-211-final\src\model.cxx > CMakeFiles\model_test.dir\src\model.cxx.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\src\model.cxx > CMakeFiles\model_test.dir\src\model.cxx.i
 
 CMakeFiles/model_test.dir/src/model.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/model_test.dir/src/model.cxx.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jason\Documents\CS211\compsci-211-final\src\model.cxx -o CMakeFiles\model_test.dir\src\model.cxx.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\src\model.cxx -o CMakeFiles\model_test.dir\src\model.cxx.s
 
 # Object files for target model_test
 model_test_OBJECTS = \
@@ -121,7 +121,7 @@ model_test.exe: C:/MinGW/lib/libSDL2_ttf.dll.a
 model_test.exe: CMakeFiles/model_test.dir/linklibs.rsp
 model_test.exe: CMakeFiles/model_test.dir/objects1.rsp
 model_test.exe: CMakeFiles/model_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable model_test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable model_test.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\model_test.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -134,6 +134,6 @@ CMakeFiles/model_test.dir/clean:
 .PHONY : CMakeFiles/model_test.dir/clean
 
 CMakeFiles/model_test.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Jason\Documents\CS211\compsci-211-final C:\Users\Jason\Documents\CS211\compsci-211-final C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles\model_test.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles\model_test.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/model_test.dir/depend
 

@@ -45,14 +45,14 @@ unset(_expectedTargets)
 add_library(catch STATIC IMPORTED)
 
 set_target_properties(catch PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/Jason/Documents/CS211/compsci-211-final/.cs211/lib/catch/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/.cs211/lib/catch/include"
 )
 
 # Import target "catch" for configuration "Debug"
 set_property(TARGET catch APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(catch PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/Jason/Documents/CS211/compsci-211-final/cmake-build-debug/.cs211/lib/catch/libcatch.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/cmake-build-debug/.cs211/lib/catch/libcatch.a"
   )
 
 # This file does not depend on other imported targets which have

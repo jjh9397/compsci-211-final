@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Jason\Documents\CS211\compsci-211-final
+CMAKE_SOURCE_DIR = C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -136,14 +136,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\.cs211\lib\ge211\CMakeFiles\progress.marks
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\.cs211\lib\ge211\CMakeFiles\progress.marks
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/clean
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/clean
 .PHONY : clean
 
 # The main clean target
@@ -153,22 +153,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/preinstall
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/preinstall
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 .cs211/lib/ge211/CMakeFiles/ge211.dir/rule:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/CMakeFiles/ge211.dir/rule
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/ge211/CMakeFiles/ge211.dir/rule
 .PHONY : .cs211/lib/ge211/CMakeFiles/ge211.dir/rule
 
 # Convenience name for target.
@@ -178,7 +178,7 @@ ge211: .cs211/lib/ge211/CMakeFiles/ge211.dir/rule
 
 # fast build rule for target.
 ge211/fast:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/build
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/build
 .PHONY : ge211/fast
 
 src/ge211_audio.obj: src/ge211_audio.cxx.obj
@@ -187,7 +187,7 @@ src/ge211_audio.obj: src/ge211_audio.cxx.obj
 
 # target to build an object file
 src/ge211_audio.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_audio.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_audio.cxx.obj
 .PHONY : src/ge211_audio.cxx.obj
 
 src/ge211_audio.i: src/ge211_audio.cxx.i
@@ -196,7 +196,7 @@ src/ge211_audio.i: src/ge211_audio.cxx.i
 
 # target to preprocess a source file
 src/ge211_audio.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_audio.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_audio.cxx.i
 .PHONY : src/ge211_audio.cxx.i
 
 src/ge211_audio.s: src/ge211_audio.cxx.s
@@ -205,7 +205,7 @@ src/ge211_audio.s: src/ge211_audio.cxx.s
 
 # target to generate assembly for a file
 src/ge211_audio.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_audio.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_audio.cxx.s
 .PHONY : src/ge211_audio.cxx.s
 
 src/ge211_base.obj: src/ge211_base.cxx.obj
@@ -214,7 +214,7 @@ src/ge211_base.obj: src/ge211_base.cxx.obj
 
 # target to build an object file
 src/ge211_base.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_base.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_base.cxx.obj
 .PHONY : src/ge211_base.cxx.obj
 
 src/ge211_base.i: src/ge211_base.cxx.i
@@ -223,7 +223,7 @@ src/ge211_base.i: src/ge211_base.cxx.i
 
 # target to preprocess a source file
 src/ge211_base.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_base.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_base.cxx.i
 .PHONY : src/ge211_base.cxx.i
 
 src/ge211_base.s: src/ge211_base.cxx.s
@@ -232,7 +232,7 @@ src/ge211_base.s: src/ge211_base.cxx.s
 
 # target to generate assembly for a file
 src/ge211_base.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_base.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_base.cxx.s
 .PHONY : src/ge211_base.cxx.s
 
 src/ge211_color.obj: src/ge211_color.cxx.obj
@@ -241,7 +241,7 @@ src/ge211_color.obj: src/ge211_color.cxx.obj
 
 # target to build an object file
 src/ge211_color.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_color.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_color.cxx.obj
 .PHONY : src/ge211_color.cxx.obj
 
 src/ge211_color.i: src/ge211_color.cxx.i
@@ -250,7 +250,7 @@ src/ge211_color.i: src/ge211_color.cxx.i
 
 # target to preprocess a source file
 src/ge211_color.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_color.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_color.cxx.i
 .PHONY : src/ge211_color.cxx.i
 
 src/ge211_color.s: src/ge211_color.cxx.s
@@ -259,7 +259,7 @@ src/ge211_color.s: src/ge211_color.cxx.s
 
 # target to generate assembly for a file
 src/ge211_color.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_color.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_color.cxx.s
 .PHONY : src/ge211_color.cxx.s
 
 src/ge211_engine.obj: src/ge211_engine.cxx.obj
@@ -268,7 +268,7 @@ src/ge211_engine.obj: src/ge211_engine.cxx.obj
 
 # target to build an object file
 src/ge211_engine.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_engine.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_engine.cxx.obj
 .PHONY : src/ge211_engine.cxx.obj
 
 src/ge211_engine.i: src/ge211_engine.cxx.i
@@ -277,7 +277,7 @@ src/ge211_engine.i: src/ge211_engine.cxx.i
 
 # target to preprocess a source file
 src/ge211_engine.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_engine.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_engine.cxx.i
 .PHONY : src/ge211_engine.cxx.i
 
 src/ge211_engine.s: src/ge211_engine.cxx.s
@@ -286,7 +286,7 @@ src/ge211_engine.s: src/ge211_engine.cxx.s
 
 # target to generate assembly for a file
 src/ge211_engine.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_engine.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_engine.cxx.s
 .PHONY : src/ge211_engine.cxx.s
 
 src/ge211_error.obj: src/ge211_error.cxx.obj
@@ -295,7 +295,7 @@ src/ge211_error.obj: src/ge211_error.cxx.obj
 
 # target to build an object file
 src/ge211_error.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_error.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_error.cxx.obj
 .PHONY : src/ge211_error.cxx.obj
 
 src/ge211_error.i: src/ge211_error.cxx.i
@@ -304,7 +304,7 @@ src/ge211_error.i: src/ge211_error.cxx.i
 
 # target to preprocess a source file
 src/ge211_error.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_error.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_error.cxx.i
 .PHONY : src/ge211_error.cxx.i
 
 src/ge211_error.s: src/ge211_error.cxx.s
@@ -313,7 +313,7 @@ src/ge211_error.s: src/ge211_error.cxx.s
 
 # target to generate assembly for a file
 src/ge211_error.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_error.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_error.cxx.s
 .PHONY : src/ge211_error.cxx.s
 
 src/ge211_event.obj: src/ge211_event.cxx.obj
@@ -322,7 +322,7 @@ src/ge211_event.obj: src/ge211_event.cxx.obj
 
 # target to build an object file
 src/ge211_event.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_event.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_event.cxx.obj
 .PHONY : src/ge211_event.cxx.obj
 
 src/ge211_event.i: src/ge211_event.cxx.i
@@ -331,7 +331,7 @@ src/ge211_event.i: src/ge211_event.cxx.i
 
 # target to preprocess a source file
 src/ge211_event.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_event.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_event.cxx.i
 .PHONY : src/ge211_event.cxx.i
 
 src/ge211_event.s: src/ge211_event.cxx.s
@@ -340,7 +340,7 @@ src/ge211_event.s: src/ge211_event.cxx.s
 
 # target to generate assembly for a file
 src/ge211_event.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_event.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_event.cxx.s
 .PHONY : src/ge211_event.cxx.s
 
 src/ge211_geometry.obj: src/ge211_geometry.cxx.obj
@@ -349,7 +349,7 @@ src/ge211_geometry.obj: src/ge211_geometry.cxx.obj
 
 # target to build an object file
 src/ge211_geometry.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_geometry.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_geometry.cxx.obj
 .PHONY : src/ge211_geometry.cxx.obj
 
 src/ge211_geometry.i: src/ge211_geometry.cxx.i
@@ -358,7 +358,7 @@ src/ge211_geometry.i: src/ge211_geometry.cxx.i
 
 # target to preprocess a source file
 src/ge211_geometry.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_geometry.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_geometry.cxx.i
 .PHONY : src/ge211_geometry.cxx.i
 
 src/ge211_geometry.s: src/ge211_geometry.cxx.s
@@ -367,7 +367,7 @@ src/ge211_geometry.s: src/ge211_geometry.cxx.s
 
 # target to generate assembly for a file
 src/ge211_geometry.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_geometry.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_geometry.cxx.s
 .PHONY : src/ge211_geometry.cxx.s
 
 src/ge211_random.obj: src/ge211_random.cxx.obj
@@ -376,7 +376,7 @@ src/ge211_random.obj: src/ge211_random.cxx.obj
 
 # target to build an object file
 src/ge211_random.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_random.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_random.cxx.obj
 .PHONY : src/ge211_random.cxx.obj
 
 src/ge211_random.i: src/ge211_random.cxx.i
@@ -385,7 +385,7 @@ src/ge211_random.i: src/ge211_random.cxx.i
 
 # target to preprocess a source file
 src/ge211_random.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_random.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_random.cxx.i
 .PHONY : src/ge211_random.cxx.i
 
 src/ge211_random.s: src/ge211_random.cxx.s
@@ -394,7 +394,7 @@ src/ge211_random.s: src/ge211_random.cxx.s
 
 # target to generate assembly for a file
 src/ge211_random.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_random.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_random.cxx.s
 .PHONY : src/ge211_random.cxx.s
 
 src/ge211_render.obj: src/ge211_render.cxx.obj
@@ -403,7 +403,7 @@ src/ge211_render.obj: src/ge211_render.cxx.obj
 
 # target to build an object file
 src/ge211_render.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_render.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_render.cxx.obj
 .PHONY : src/ge211_render.cxx.obj
 
 src/ge211_render.i: src/ge211_render.cxx.i
@@ -412,7 +412,7 @@ src/ge211_render.i: src/ge211_render.cxx.i
 
 # target to preprocess a source file
 src/ge211_render.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_render.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_render.cxx.i
 .PHONY : src/ge211_render.cxx.i
 
 src/ge211_render.s: src/ge211_render.cxx.s
@@ -421,7 +421,7 @@ src/ge211_render.s: src/ge211_render.cxx.s
 
 # target to generate assembly for a file
 src/ge211_render.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_render.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_render.cxx.s
 .PHONY : src/ge211_render.cxx.s
 
 src/ge211_resource.obj: src/ge211_resource.cxx.obj
@@ -430,7 +430,7 @@ src/ge211_resource.obj: src/ge211_resource.cxx.obj
 
 # target to build an object file
 src/ge211_resource.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_resource.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_resource.cxx.obj
 .PHONY : src/ge211_resource.cxx.obj
 
 src/ge211_resource.i: src/ge211_resource.cxx.i
@@ -439,7 +439,7 @@ src/ge211_resource.i: src/ge211_resource.cxx.i
 
 # target to preprocess a source file
 src/ge211_resource.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_resource.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_resource.cxx.i
 .PHONY : src/ge211_resource.cxx.i
 
 src/ge211_resource.s: src/ge211_resource.cxx.s
@@ -448,7 +448,7 @@ src/ge211_resource.s: src/ge211_resource.cxx.s
 
 # target to generate assembly for a file
 src/ge211_resource.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_resource.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_resource.cxx.s
 .PHONY : src/ge211_resource.cxx.s
 
 src/ge211_session.obj: src/ge211_session.cxx.obj
@@ -457,7 +457,7 @@ src/ge211_session.obj: src/ge211_session.cxx.obj
 
 # target to build an object file
 src/ge211_session.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_session.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_session.cxx.obj
 .PHONY : src/ge211_session.cxx.obj
 
 src/ge211_session.i: src/ge211_session.cxx.i
@@ -466,7 +466,7 @@ src/ge211_session.i: src/ge211_session.cxx.i
 
 # target to preprocess a source file
 src/ge211_session.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_session.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_session.cxx.i
 .PHONY : src/ge211_session.cxx.i
 
 src/ge211_session.s: src/ge211_session.cxx.s
@@ -475,7 +475,7 @@ src/ge211_session.s: src/ge211_session.cxx.s
 
 # target to generate assembly for a file
 src/ge211_session.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_session.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_session.cxx.s
 .PHONY : src/ge211_session.cxx.s
 
 src/ge211_sprites.obj: src/ge211_sprites.cxx.obj
@@ -484,7 +484,7 @@ src/ge211_sprites.obj: src/ge211_sprites.cxx.obj
 
 # target to build an object file
 src/ge211_sprites.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_sprites.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_sprites.cxx.obj
 .PHONY : src/ge211_sprites.cxx.obj
 
 src/ge211_sprites.i: src/ge211_sprites.cxx.i
@@ -493,7 +493,7 @@ src/ge211_sprites.i: src/ge211_sprites.cxx.i
 
 # target to preprocess a source file
 src/ge211_sprites.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_sprites.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_sprites.cxx.i
 .PHONY : src/ge211_sprites.cxx.i
 
 src/ge211_sprites.s: src/ge211_sprites.cxx.s
@@ -502,7 +502,7 @@ src/ge211_sprites.s: src/ge211_sprites.cxx.s
 
 # target to generate assembly for a file
 src/ge211_sprites.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_sprites.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_sprites.cxx.s
 .PHONY : src/ge211_sprites.cxx.s
 
 src/ge211_window.obj: src/ge211_window.cxx.obj
@@ -511,7 +511,7 @@ src/ge211_window.obj: src/ge211_window.cxx.obj
 
 # target to build an object file
 src/ge211_window.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_window.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_window.cxx.obj
 .PHONY : src/ge211_window.cxx.obj
 
 src/ge211_window.i: src/ge211_window.cxx.i
@@ -520,7 +520,7 @@ src/ge211_window.i: src/ge211_window.cxx.i
 
 # target to preprocess a source file
 src/ge211_window.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_window.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_window.cxx.i
 .PHONY : src/ge211_window.cxx.i
 
 src/ge211_window.s: src/ge211_window.cxx.s
@@ -529,7 +529,7 @@ src/ge211_window.s: src/ge211_window.cxx.s
 
 # target to generate assembly for a file
 src/ge211_window.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_window.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\ge211\CMakeFiles\ge211.dir\build.make .cs211/lib/ge211/CMakeFiles/ge211.dir/src/ge211_window.cxx.s
 .PHONY : src/ge211_window.cxx.s
 
 # Help Target
@@ -596,6 +596,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

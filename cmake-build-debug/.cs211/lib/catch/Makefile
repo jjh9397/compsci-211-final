@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Jason\Documents\CS211\compsci-211-final
+CMAKE_SOURCE_DIR = C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -136,14 +136,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\.cs211\lib\catch\CMakeFiles\progress.marks
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\.cs211\lib\catch\CMakeFiles\progress.marks
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/clean
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/clean
 .PHONY : clean
 
 # The main clean target
@@ -153,22 +153,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/preinstall
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/preinstall
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 .cs211/lib/catch/CMakeFiles/catch.dir/rule:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/CMakeFiles/catch.dir/rule
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 .cs211/lib/catch/CMakeFiles/catch.dir/rule
 .PHONY : .cs211/lib/catch/CMakeFiles/catch.dir/rule
 
 # Convenience name for target.
@@ -178,7 +178,7 @@ catch: .cs211/lib/catch/CMakeFiles/catch.dir/rule
 
 # fast build rule for target.
 catch/fast:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/build
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/build
 .PHONY : catch/fast
 
 src/catch-main.obj: src/catch-main.cxx.obj
@@ -187,7 +187,7 @@ src/catch-main.obj: src/catch-main.cxx.obj
 
 # target to build an object file
 src/catch-main.cxx.obj:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.obj
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.obj
 .PHONY : src/catch-main.cxx.obj
 
 src/catch-main.i: src/catch-main.cxx.i
@@ -196,7 +196,7 @@ src/catch-main.i: src/catch-main.cxx.i
 
 # target to preprocess a source file
 src/catch-main.cxx.i:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.i
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.i
 .PHONY : src/catch-main.cxx.i
 
 src/catch-main.s: src/catch-main.cxx.s
@@ -205,7 +205,7 @@ src/catch-main.s: src/catch-main.cxx.s
 
 # target to generate assembly for a file
 src/catch-main.cxx.s:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.s
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(MAKE) -f .cs211\lib\catch\CMakeFiles\catch.dir\build.make .cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.s
 .PHONY : src/catch-main.cxx.s
 
 # Help Target
@@ -236,6 +236,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\Jason\Documents\CS211\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\jjian\OneDrive\Documents\GitHub\compsci-211-final\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

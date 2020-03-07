@@ -4,7 +4,7 @@
 # compile CXX with C:/MinGW/bin/g++.exe
 CXX_FLAGS = -g   -Wall -Wextra -pedantic -std=c++14
 
-CXX_DEFINES = -DGE211_RESOURCES=\"C:/Users/Jason/Documents/CS211/compsci-211-final/.cs211/lib/ge211/Resources/\",\"/ge211/\"
+CXX_DEFINES = -DGE211_RESOURCES=\"C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/.cs211/lib/ge211/Resources/\",\"/ge211/\"
 
 CXX_INCLUDES = @CMakeFiles/ge211.dir/includes_CXX.rsp
 

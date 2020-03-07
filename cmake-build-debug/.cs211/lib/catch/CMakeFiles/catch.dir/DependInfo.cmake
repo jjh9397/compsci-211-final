@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Jason/Documents/CS211/compsci-211-final/.cs211/lib/catch/src/catch-main.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.obj"
+  "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/.cs211/lib/catch/src/catch-main.cxx" "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/src/catch-main.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

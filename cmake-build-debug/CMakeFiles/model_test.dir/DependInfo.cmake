@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Jason/Documents/CS211/compsci-211-final/src/model.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/cmake-build-debug/CMakeFiles/model_test.dir/src/model.cxx.obj"
-  "C:/Users/Jason/Documents/CS211/compsci-211-final/src/player.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/cmake-build-debug/CMakeFiles/model_test.dir/src/player.cxx.obj"
-  "C:/Users/Jason/Documents/CS211/compsci-211-final/test/model_test.cxx" "C:/Users/Jason/Documents/CS211/compsci-211-final/cmake-build-debug/CMakeFiles/model_test.dir/test/model_test.cxx.obj"
+  "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/src/model.cxx" "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/cmake-build-debug/CMakeFiles/model_test.dir/src/model.cxx.obj"
+  "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/src/player.cxx" "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/cmake-build-debug/CMakeFiles/model_test.dir/src/player.cxx.obj"
+  "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/test/model_test.cxx" "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/cmake-build-debug/CMakeFiles/model_test.dir/test/model_test.cxx.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -20,8 +20,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/Jason/Documents/CS211/compsci-211-final/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/DependInfo.cmake"
-  "C:/Users/Jason/Documents/CS211/compsci-211-final/cmake-build-debug/.cs211/lib/ge211/CMakeFiles/ge211.dir/DependInfo.cmake"
+  "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/cmake-build-debug/.cs211/lib/catch/CMakeFiles/catch.dir/DependInfo.cmake"
+  "C:/Users/jjian/OneDrive/Documents/GitHub/compsci-211-final/cmake-build-debug/.cs211/lib/ge211/CMakeFiles/ge211.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
