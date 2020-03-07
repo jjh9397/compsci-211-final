@@ -4,8 +4,8 @@ View::View(Model const &model)
     : model_(model)
     , hitbox({50,100}, {255,255,255})
     , hurtbox({10,50}, {255,255,255})
-    , p1(ge211::Position(400,20), ge211::Position(400,20), ge211::Dimensions({1,0}))
-    , p2(ge211::Position(400,20), ge211::Position(400,20), ge211::Dimensions({-1,0}))
+    , p1(model_.get_p1_position(), model_.get_p1_position(), ge211::Dimensions({1,0}))
+    , p2(model_.get_p2_position(), model_.get_p2_position(), ge211::Dimensions({-1,0}))
 {}
 
 ge211::Dimensions View::initial_window_dimensions() const

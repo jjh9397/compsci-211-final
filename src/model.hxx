@@ -51,6 +51,10 @@ public:
 
     void update(double dt);
 
+    ge211::Position get_p1_position() const;
+
+    ge211::Position get_p2_position() const;
+
 private:
 
     friend struct Test_access;

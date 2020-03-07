@@ -100,3 +100,13 @@ void Model::p2_move(ge211::Dimensions pos)
         p2_.hitbox_velocity = pos;
     }
 }
+
+ge211::Position Model::get_p1_position() const
+{
+    return p1_.hitbox.top_left();
+}
+
+ge211::Position Model::get_p2_position() const
+{
+    return p2_.hitbox.top_right();
+}
