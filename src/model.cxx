@@ -73,7 +73,7 @@ int Model::get_p2_health()
 
 void Model::update(double dt)
 {
-    if (!check_collision)
+    if (!check_collision())
     {   
         if (!p1_.hits_side())
         {
