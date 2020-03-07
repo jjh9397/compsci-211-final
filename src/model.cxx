@@ -1,6 +1,3 @@
-#include <iostream>
-#include "player.hxx"
-#include <ge211.hxx>
 #include "model.hxx"
 
 Model::Model(Player player1, Player player2, int width, int height)
@@ -25,45 +22,91 @@ void Model::check_for_hit()
 
 void Model::p1_block()
 {
-    p1_.set_blocking(true);
+    p1_.blocking=true;
 }
 
 void Model::p1_stops_block()
 {
-    p1_.set_blocking(false);
+    p1_.blocking=false;
 }
 
 void Model::p2_block()
 {
-    p2_.set_blocking(true);
+    p2_.blocking=true;
 }
 
 void Model::p2_stops_block()
 {
-    p2_.set_blocking(false);
+    p2_.blocking=false;
 }
 
 bool Model::health_check()
 {
-    
+    if (p1_.health<=0)
+    {
+        winner_=2;
+        return true;
+    }
+    else if (p2_.health<=0)
+    {
+        winner_=1;
+        return true;
+    }
+    return false;
 }
 
-void Model::check_collision()
+bool Model::check_collision()
 {
-
+    return !(p1_.hitbox.top_right().x<p2_.hitbox.top_left().x || p2_.hitbox.top_right().x<p1_.hitbox.top_left().x ||
+            p1_.hitbox.bottom_right().y<p2_.hitbox.top_right().y || p2_.hitbox.bottom_right().y<p1_.hitbox.top_right().y);
 }
 
 int Model::get_p1_health()
 {
-    return p1_.get_health();
+    return p1_.health;
 }
 
 int Model::get_p2_health()
 {
-    return p2_.get_health();
+    return p2_.health;
 }
 
 void Model::update(double dt)
 {
-    
+    if (!check_collision())
+    {   
+        if (!p1_.hits_side())
+        {
+            p1_.hitbox.top_left() = p1_.hitbox_next();
+        }
+        if (!p2_.hits_side())
+        {
+            p2_.hitbox.top_left() = p2_.hitbox_next();
+        }
+    }
+}
+
+void Model::p1_move(ge211::Dimensions pos)
+{
+    if(!check_collision() || (!p1_.hits_side()))
+    {
+        p1_.hitbox_velocity = pos;
+    }
+}
+void Model::p2_move(ge211::Dimensions pos)
+{
+    if(!check_collision() || (!p2_.hits_side()))
+    {
+        p2_.hitbox_velocity = pos;
+    }
+}
+
+ge211::Position Model::get_p1_position() const
+{
+    return p1_.hitbox.top_left();
+}
+
+ge211::Position Model::get_p2_position() const
+{
+    return p2_.hitbox.top_right();
 }

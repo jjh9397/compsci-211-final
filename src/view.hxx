@@ -15,8 +15,8 @@ public:
 
 private:
    Model const& model_;
-   ge211::Rectangle_sprite hitbox;
-   ge211::Rectangle_sprite hurtbox;
+   ge211::Rectangle_sprite hitbox_sprite;
+   ge211::Rectangle_sprite hurtbox_sprite;
    Player p1;
    Player p2;
 };

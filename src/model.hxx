@@ -13,10 +13,10 @@ public:
     explicit Model(Player player1, Player player2, int width, int height);
 
     // sets the velocity of the player
-    void set_p1_velocity(ge211::Position);
+    void p1_move(ge211::Dimensions);
 
     // sets the velocity of the player
-    void set_p2_velocity(ge211::Position);
+    void p2_move(ge211::Dimensions);
 
     // makes the  1st player do their attack based on if it is charged up or not
     void p1_attack();
@@ -41,7 +41,7 @@ public:
     bool health_check();
 
     // checks to make sure players do not go through each other
-    void check_collision();
+    bool check_collision();
 
     // gets the health of the 1st player
     int get_p1_health();
@@ -50,6 +50,10 @@ public:
     int get_p2_health();
 
     void update(double dt);
+
+    ge211::Position get_p1_position() const;
+
+    ge211::Position get_p2_position() const;
 
 private:
 
