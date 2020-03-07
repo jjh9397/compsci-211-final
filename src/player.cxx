@@ -58,76 +58,13 @@ bool Player::hits_bottom()
     }
 }
 
-bool Player::take_damage(int damage)
-{
+bool Player::take_damage(int damage) {
     health -= damage;
-    if (health < 0)
-    {
+    if (health < 0) {
         return false;
-    }
-    else
-    {
+    } else {
         return true;
     }
 }
-int Player::get_health()
-{
-    return health;
-}
-    
-//void Player::set_hitbox_position(ge211::Position)
-ge211::Position Player::get_hitbox_position()
-{
-    return hitbox.top_left();
-}
 
-//void Player::set_hurtbox_position(ge211::Position)
-ge211::Position Player::get_hurtbox_position()
-{
-    return hurtbox.top_left();
-}
-    
-void Player::set_hitbox_velocity(ge211::Dimensions vel)
-{
-    hitbox_velocity = vel;
-}
-ge211::Dimensions Player::get_hitbox_velocity()
-{
-    return hitbox_velocity;
-}
 
-void Player::set_hurtbox_velocity(ge211::Dimensions vel)
-{
-    hurtbox_velocity = vel;
-}
-void Player::set_hurtbox_angular_velocity(int vel)
-{
-    hurtbox_angular_velocity = vel;
-}
-ge211::Dimensions Player::get_hurtbox_velocity()
-{
-    return hurtbox_velocity;
-}
-int Player::get_hurtbox_angular_velocity()
-{
-    return hurtbox_angular_velocity;
-}
-
-void Player::set_direction(ge211::Dimensions dir)
-{
-    direction = dir;
-}
-ge211::Dimensions Player::get_direction()
-{
-    return direction;
-}
-
-void Player::set_blocking(bool block)
-{
-    blocking = block;
-}
-
-bool Player::get_blocking()
-{
-    return blocking;
-}
