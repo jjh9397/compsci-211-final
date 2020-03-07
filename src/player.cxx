@@ -1,7 +1,7 @@
 #include "player.hxx"
 
 Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensions facing)
-        : hitbox({hit_pos.x, hit_pos.y,50,100})
+        : hitbox({hit_pos.x, hit_pos.y,200,250})
         , hitbox_velocity({0,0})
         , hurtbox_velocity({0,0})
         , blocking(false)
@@ -12,11 +12,21 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
     //hitbox.top_left() = hit_pos;
     //hurtbox.top_left() = hurt_pos;
 }
+
+
 // change these to return rectangles??
-ge211::Position Player::hitbox_next()
+Player Player::hitbox_next()
 {
-    ge211::Position result = hitbox.top_left();
-    result += hitbox_velocity;
+    ge211::Position next_hit_pos = {this->hitbox.top_left().x + hitbox_velocity.width, this->hitbox.top_left().y + hitbox_velocity.height};
+    Player result(next_hit_pos, hurtbox.top_left(), direction);
+    result.active = this->active;
+    result.blocking = this->blocking;
+    result.direction = this->direction;
+    result.health = this->health;
+    result.hitbox_velocity = this->hitbox_velocity;
+    result.hurtbox = this->hurtbox;
+    result.recovery = this->recovery;
+    //fix hurtbox stuff
     return result;
 }
 
