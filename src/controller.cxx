@@ -24,11 +24,19 @@ void Controller::on_key_down(ge211::Key key)
 {
     if (key == ge211::Key::code('q'))
     {
-        model_.set_p1_velocity({-50,0});
+        model_.p1_move({-50,0});
     }
     if (key == ge211::Key::code('e'))
     {
-        model_.set_p1_velocity({50,0});
+        model_.p1_move({50,0});
+    }
+    if (key == ge211::Key::code(','))
+    {
+        model_.p2_move({-50,0});
+    }
+    if (key == ge211::Key::code('/'))
+    {
+        model_.p2_move({50,0});
     }
 }
 

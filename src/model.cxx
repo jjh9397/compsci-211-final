@@ -45,12 +45,24 @@ void Model::p2_stops_block()
 
 bool Model::health_check()
 {
-    
+    if (p1_.health<=0)
+    {
+        winner_=2;
+        return true;
+    }
+    else if (p2_.health<=0)
+    {
+        winner_=1;
+        return true;
+    }
+    return false;
 }
 
-void Model::check_collision()
+bool Model::check_collision()
 {
 
+
+    return false;
 }
 
 int Model::get_p1_health()
@@ -66,4 +78,19 @@ int Model::get_p2_health()
 void Model::update(double dt)
 {
     
+}
+
+void Model::p1_move(ge211::Dimensions pos)
+{
+    if(!check_collision())
+    {
+        p1_.hitbox_velocity = pos;
+    }
+}
+void Model::p2_move(ge211::Dimensions pos)
+{
+    if(!check_collision())
+    {
+        p2_.hitbox_velocity = pos;
+    }
 }
