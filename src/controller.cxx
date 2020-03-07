@@ -59,3 +59,8 @@ void Controller::on_key_up(ge211::Key key)
         model_.p2_move({0,0});
     }
 }
+
+void Controller::on_frame(double dt)
+{
+    model_.update(dt);
+}
