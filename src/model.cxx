@@ -60,9 +60,8 @@ bool Model::health_check()
 
 bool Model::check_collision()
 {
-
-
-    return false;
+    return !(p1_.hitbox.top_right().x<p2_.hitbox.top_left().x || p2_.hitbox.top_right().x<p1_.hitbox.top_left().x ||
+            p1_.hitbox.bottom_right().y<p2_.hitbox.top_right().y || p2_.hitbox.bottom_right().y<p1_.hitbox.top_right().y);
 }
 
 int Model::get_p1_health()
@@ -82,14 +81,14 @@ void Model::update(double dt)
 
 void Model::p1_move(ge211::Dimensions pos)
 {
-    if(!check_collision())
+    if(!check_collision() || (!p1_.hits_side()))
     {
         p1_.hitbox_velocity = pos;
     }
 }
 void Model::p2_move(ge211::Dimensions pos)
 {
-    if(!check_collision())
+    if(!check_collision() || (!p2_.hits_side()))
     {
         p2_.hitbox_velocity = pos;
     }
