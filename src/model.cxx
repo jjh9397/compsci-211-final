@@ -1,6 +1,3 @@
-#include <iostream>
-#include "player.hxx"
-#include <ge211.hxx>
 #include "model.hxx"
 
 Model::Model(Player player1, Player player2, int width, int height)
