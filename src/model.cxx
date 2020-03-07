@@ -73,8 +73,8 @@ int Model::get_p2_health()
 
 void Model::update(double dt)
 {
-    p1_.hitbox.top_left() = p1_.hitbox_next();
-    p2_.hitbox.top_left() = p2_.hitbox_next();
+    p1_ = p1_.hitbox_next();
+    p2_ = p2_.hitbox_next();
 }
 
 void Model::p1_move(ge211::Dimensions pos)

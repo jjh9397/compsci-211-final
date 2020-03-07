@@ -7,7 +7,7 @@ struct Player
 {
     Player(ge211::Position, ge211::Position, ge211::Dimensions);
 
-    ge211::Position hitbox_next();
+    Player hitbox_next();
     ge211::Position hurtbox_next();
     bool hits_side();
     bool hits_bottom();

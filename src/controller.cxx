@@ -44,11 +44,11 @@ void Controller::on_key_up(ge211::Key key)
 {
     if (key == ge211::Key::code('q'))
     {
-        model_.p1_move({0,0});
+        model_.p1_move({-50,0});
     }
     if (key == ge211::Key::code('e'))
     {
-        model_.p1_move({0,0});
+        model_.p1_move({50,0});
     }
     if (key == ge211::Key::code(','))
     {
