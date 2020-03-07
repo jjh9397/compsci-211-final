@@ -73,17 +73,8 @@ int Model::get_p2_health()
 
 void Model::update(double dt)
 {
-    if (!check_collision())
-    {   
-        if (!p1_.hits_side())
-        {
-            p1_.hitbox.top_left() = p1_.hitbox_next();
-        }
-        if (!p2_.hits_side())
-        {
-            p2_.hitbox.top_left() = p2_.hitbox_next();
-        }
-    }
+    p1_.hitbox.top_left() = p1_.hitbox_next();
+    p2_.hitbox.top_left() = p2_.hitbox_next();
 }
 
 void Model::p1_move(ge211::Dimensions pos)
@@ -108,5 +99,5 @@ ge211::Position Model::get_p1_position() const
 
 ge211::Position Model::get_p2_position() const
 {
-    return p2_.hitbox.top_right();
+    return p2_.hitbox.top_left();
 }

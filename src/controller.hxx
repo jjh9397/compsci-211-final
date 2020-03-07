@@ -15,7 +15,7 @@ protected:
     //void on_mouse_up(ge211::Mouse_button, ge211::Position) override;
     void on_key_down(ge211::Key) override;
     void on_key_up(ge211::Key) override;
-//    void on_frame(double dt) override;
+    void on_frame(double dt) override;
 
 private:
     Model model_;
