@@ -10,7 +10,7 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
         , direction(facing)
 {
     hitbox.top_left() = hit_pos;
-    hitbox.top_right() = hurt_pos;
+    hurtbox.top_left() = hurt_pos;
 }
 // change these to return rectangles??
 ge211::Position Player::hitbox_next()
