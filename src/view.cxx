@@ -20,6 +20,6 @@ std::string View::initial_window_title() const
 
 void View::draw(ge211::Sprite_set& set)
 {
-    set.add_sprite(hitbox_sprite, p1.hitbox.top_left());
-    set.add_sprite(hitbox_sprite, p2.hitbox.top_left());
+    set.add_sprite(hitbox_sprite, model_.get_p1_position());
+    set.add_sprite(hitbox_sprite, model_.get_p2_position());
 }
