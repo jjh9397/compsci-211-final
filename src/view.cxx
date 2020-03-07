@@ -4,8 +4,6 @@ View::View(Model const &model)
     : model_(model)
     , hitbox_sprite({50,100}, {255,255,255})
     , hurtbox_sprite({10,50}, {255,255,255})
-    , p1(model_.get_p1_position(), model_.get_p1_position(), ge211::Dimensions({1,0}))
-    , p2(model_.get_p2_position(), model_.get_p2_position(), ge211::Dimensions({-1,0}))
 {}
 
 ge211::Dimensions View::initial_window_dimensions() const
