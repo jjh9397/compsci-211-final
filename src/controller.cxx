@@ -42,7 +42,7 @@ void Controller::on_key_down(ge211::Key key)
     if (key == ge211::Key::code('/'))
     {
         model_.p2_move({10,0});
-        p1_buffer.push_back(forward);
+        p2_buffer.push_back(forward);
     }
 }
 
