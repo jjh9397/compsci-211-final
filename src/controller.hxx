@@ -2,6 +2,12 @@
 #include "model.hxx"
 #include "view.hxx"
 
+struct Input
+{
+    std::string move;
+    ge211::Time_point timestamp;
+};
+
 class Controller : public ge211::Abstract_game
 {
 public:
@@ -20,4 +26,11 @@ protected:
 private:
     Model model_;
     View view_;
+    std::vector<Input> p1_buffer;
+    std::vector<Input> p2_buffer;
+    Input back;
+    Input down;
+    Input forward;
+    Input attack;
+    Input block;
 };

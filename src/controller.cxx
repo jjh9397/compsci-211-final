@@ -25,18 +25,24 @@ void Controller::on_key_down(ge211::Key key)
     if (key == ge211::Key::code('q'))
     {
         model_.p1_move({-10,0});
+        back.timestamp = ge211::Time_point::now();
+        p1_buffer.push_back(back);
     }
     if (key == ge211::Key::code('e'))
     {
         model_.p1_move({10,0});
+        forward.timestamp = ge211::Time_point::now();
+        p1_buffer.push_back(forward);
     }
     if (key == ge211::Key::code(','))
     {
         model_.p2_move({-10,0});
+        p2_buffer.push_back(back);
     }
     if (key == ge211::Key::code('/'))
     {
         model_.p2_move({10,0});
+        p1_buffer.push_back(forward);
     }
 }
 
