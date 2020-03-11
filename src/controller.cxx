@@ -35,37 +35,33 @@ void Controller::on_key_down(ge211::Key key)
 {
     if (key == ge211::Key::code('q'))
     {
-        //model_.p1_move({-10,0});
         back.timestamp = model_.frame;
         p1_buffer.buffer.push_back(back);
     }
     if (key == ge211::Key::code('e') && !model_.check_collision())
     {
-        //model_.p1_move({10,0});
         front.timestamp = model_.frame;
         p1_buffer.buffer.push_back(front);
     }
     if (key == ge211::Key::code(','))
     {
-        model_.p2_move({-10,0});
         back.timestamp = model_.frame;
         p2_buffer.buffer.push_back(back);
     }
     if (key == ge211::Key::code('/'))
     {
-        model_.p2_move({10,0});
         front.timestamp = model_.frame;
         p2_buffer.buffer.push_back(front);
     }
     if (key == ge211::Key::code('r'))
     {
-        model_.p1_attack();
         attack.timestamp = model_.frame;
         p1_buffer.buffer.push_back(attack);
     }
     if (key == ge211::Key::code('.'))
     {
-        model_.p2_attack();
+        attack.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(attack);
     }
     if (key == ge211::Key::code('f') || model_.game_over())
         quit();
@@ -85,19 +81,23 @@ void Controller::on_key_up(ge211::Key key)
     }
     if (key == ge211::Key::code(','))
     {
-        model_.p2_move({0,0});
+        neutral.timestamp = model_.frame;
+        p2_buffer.buffer.push_back(neutral);
     }
     if (key == ge211::Key::code('/'))
     {
-        model_.p2_move({0,0});
+        neutral.timestamp = model_.frame;
+        p2_buffer.buffer.push_back(neutral);
     }
     if (key == ge211::Key::code('r'))
     {
-        model_.p1_stop_attack();
+        neutral.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(neutral);
     }
     if (key == ge211::Key::code('.'))
     {
-        model_.p2_stop_attack();
+        neutral.timestamp = model_.frame;
+        p2_buffer.buffer.push_back(neutral);
     }
 
 }
@@ -115,12 +115,7 @@ void Controller::on_frame(double dt)
         {
             model_.p1_move({-10,0});
         }
-        else
-        {
-            model_.p1_move({0,0});
-        }
-        
-        if (p1_buffer.check_move("6"))
+        else if (p1_buffer.check_move("6"))
         {
             model_.p1_move({10,0});
         }
@@ -132,6 +127,39 @@ void Controller::on_frame(double dt)
         if (p1_buffer.check_move("A"))
         {
             model_.p1_attack();
+        }
+        else
+        {
+            model_.p1_stop_attack();
+        }
+    }
+    if (p2_buffer.buffer.size() > 0)
+    {
+        if (model_.frame - p2_buffer.buffer[0].timestamp > 8 && p2_buffer.buffer.size() > 1)
+        {
+            p2_buffer.buffer.erase(p2_buffer.buffer.begin());
+        }
+
+        if (p2_buffer.check_move("4"))
+        {
+            model_.p2_move({-10,0});
+        }
+        else if (p2_buffer.check_move("6"))
+        {
+            model_.p2_move({10,0});
+        }
+        else
+        {
+            model_.p2_move({0,0});
+        }
+
+        if (p2_buffer.check_move("A"))
+        {
+            model_.p2_attack();
+        }
+        else
+        {
+            model_.p2_stop_attack();
         }
     }
     // if (p2_buffer.buffer.size() > 0)

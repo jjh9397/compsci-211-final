@@ -19,6 +19,13 @@ struct Input_buffer
     {
         for (Input input : buffer)
         {
+            if (check == "A")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
             if (check == "4")
             {
                 if (input.move == check && input == buffer[buffer.size() - 1])

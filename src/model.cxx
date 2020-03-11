@@ -111,11 +111,11 @@ void Model::p1_move(ge211::Dimensions pos)
     {
         p1_.hitbox_velocity = pos;
     }
-    else
-    {
-        ge211::Dimensions position={0, 0};
-        p1_.hitbox_velocity = position;
-    }
+    // else
+    // {
+    //     ge211::Dimensions position={0, 0};
+    //     p1_.hitbox_velocity = position;
+    // }
 }
 void Model::p2_move(ge211::Dimensions pos)
 {
@@ -123,11 +123,11 @@ void Model::p2_move(ge211::Dimensions pos)
     {
         p2_.hitbox_velocity = pos;
     }
-    else
-    {
-        ge211::Dimensions position={0, 0};
-        p2_.hitbox_velocity = position;
-    }
+    // else
+    // {
+    //     ge211::Dimensions position={0, 0};
+    //     p2_.hitbox_velocity = position;
+    // }
 }
 
 ge211::Position Model::get_p1_position() const

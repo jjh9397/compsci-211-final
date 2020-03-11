@@ -11,7 +11,7 @@ View::View(Model const &model)
 
 ge211::Dimensions View::initial_window_dimensions() const
 {
-    return {1280, 720};
+    return {1280, 486};
 }
 
 std::string View::initial_window_title() const 
@@ -21,9 +21,9 @@ std::string View::initial_window_title() const
 
 void View::draw(ge211::Sprite_set& set)
 {
-    set.add_sprite(p1_sprite, model_.get_p1_position(), 1, ge211::Transform::flip_h());
-    set.add_sprite(p2_sprite, model_.get_p2_position(), 1);
-    set.add_sprite(bg, {0,234}, 0);\
+    set.add_sprite(p1_sprite, {model_.get_p1_position().x, model_.get_p1_position().y-236}, 1, ge211::Transform::flip_h());
+    set.add_sprite(p2_sprite, {model_.get_p2_position().x, model_.get_p2_position().y-236}, 1);
+    set.add_sprite(bg, {0,0}, 0);
     if(model_.get_p1_active())
     {
         set.add_sprite(hurtbox_sprite, {model_.get_p1_position().x+100,model_.get_p1_position().y+50},1);
