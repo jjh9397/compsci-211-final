@@ -1,7 +1,7 @@
 #include "player.hxx"
 
 Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensions facing)
-        : hitbox({hit_pos.x, hit_pos.y,200,250})
+        : hitbox({hit_pos.x, hit_pos.y,150,210})
         , hurtbox({hit_pos.x+hitbox.width,hit_pos.y+(hitbox.height/2),1,1})
         , hitbox_velocity({0,0})
         , hurtbox_velocity({0,0})

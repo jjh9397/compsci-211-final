@@ -4,6 +4,8 @@ Model::Model(Player player1, Player player2, int width, int height)
         : p1_(player1)
         , p2_(player2)
         , frame(0)
+        , push_p1(false)
+        , push_p2(false)
 {}
 
 void Model::p1_attack()
@@ -37,6 +39,10 @@ void Model::check_for_hit()
         {
             p2_.health-=1;
         }
+        else if(!(p1_.hurtbox.top_left().x + p1_.hurtbox.width < p2_.hitbox.top_left().x) && p2_.blocking)
+        {
+            push_p2=true;
+        }
 
     }
     if(p2_.active)
@@ -44,6 +50,10 @@ void Model::check_for_hit()
         if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && !p1_.blocking)
         {
             p1_.health-=1;
+        }
+        if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && p1_.blocking)
+        {
+            push_p1=true;
         }
     }
 }
@@ -113,11 +123,7 @@ void Model::p1_move(ge211::Dimensions pos)
     {
         p1_.hitbox_velocity = pos;
     }
-    // else
-    // {
-    //     ge211::Dimensions position={0, 0};
-    //     p1_.hitbox_velocity = position;
-    // }
+
 }
 void Model::p2_move(ge211::Dimensions pos)
 {
@@ -125,11 +131,6 @@ void Model::p2_move(ge211::Dimensions pos)
     {
         p2_.hitbox_velocity = pos;
     }
-    // else
-    // {
-    //     ge211::Dimensions position={0, 0};
-    //     p2_.hitbox_velocity = position;
-    // }
 }
 
 ge211::Position Model::get_p1_position() const

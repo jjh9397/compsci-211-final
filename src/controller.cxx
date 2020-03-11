@@ -85,7 +85,7 @@ void Controller::on_key_down(ge211::Key key)
         p2_buffer.buffer.push_back(front);
     }
     
-    if (key == ge211::Key::code('.'))
+    if (key == ge211::Key::code('m'))
     {
         attack.timestamp = model_.frame;
         p2_buffer.buffer.push_back(attack);
@@ -119,7 +119,7 @@ void Controller::on_key_up(ge211::Key key)
             p1_buffer.buffer.push_back(neutral);
         }
     }
-    if (key == ge211::Key::code('n'))
+    if (key == ge211::Key::code('t'))
     {
         neutral.timestamp = model_.frame;
         p1_buffer.buffer.push_back(neutral);
@@ -132,11 +132,6 @@ void Controller::on_key_up(ge211::Key key)
         p2_buffer.buffer.push_back(neutral);
     }
     if (key == ge211::Key::code('/'))
-    {
-        neutral.timestamp = model_.frame;
-        p2_buffer.buffer.push_back(neutral);
-    }
-    if (key == ge211::Key::code('.'))
     {
         neutral.timestamp = model_.frame;
         p2_buffer.buffer.push_back(neutral);
@@ -240,6 +235,16 @@ void Controller::on_frame(double dt)
     if (model_.game_over())
     {
         quit();
+    }
+    if (model_.push_p1)
+    {
+        model_.p1_move({-25,0});
+        model_.push_p1=false;
+    }
+    if (model_.push_p2)
+    {
+        model_.p2_move({25,0});
+        model_.push_p2=false;
     }
     //if (model_.frame>model_.p1_attack())
     //{

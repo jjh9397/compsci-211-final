@@ -63,7 +63,8 @@ public:
 
     int& access_p1_recovery();
     int& access_p2_recovery();
-
+    bool push_p1;
+    bool push_p2;
 private:
 
     friend struct Test_access;
