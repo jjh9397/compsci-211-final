@@ -61,12 +61,12 @@ void Player::attack()
 {
     if (active)
     {
-        ge211::Rectangle hurt = {hurtbox.x+hitbox.width,hurtbox.y+(hitbox.height/2),100,100};
+        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,100,50};
         hurtbox=hurt;
     }
     else
     {
-        ge211::Rectangle hurt = {hurtbox.x+hitbox.width,hurtbox.y+(hitbox.height/2),1,1};
+        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,1,1};
         hurtbox=hurt;
     }
 }
