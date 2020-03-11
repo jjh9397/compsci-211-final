@@ -19,6 +19,13 @@ struct Input_buffer
     {
         for (Input input : buffer)
         {
+            if (check == "X")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
             if (check == "A")
             {
                 if (input.move == check && input == buffer[buffer.size() - 1])
@@ -69,8 +76,11 @@ private:
     Input back;
     Input attack;
     Input neutral;
+    Input block;
+    bool t;
     bool q;
     bool e;
     bool comma;
     bool slash;
+
 };

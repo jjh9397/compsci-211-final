@@ -10,8 +10,7 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
         , health(100)     
         , direction(facing)
 {
-    //hitbox.top_left() = hit_pos;
-    //hurtbox.top_left() = hurt_pos;
+
 }
 
 

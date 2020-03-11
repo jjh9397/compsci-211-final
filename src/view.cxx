@@ -32,4 +32,12 @@ void View::draw(ge211::Sprite_set& set)
     {
         set.add_sprite(hurtbox_sprite, {model_.get_p2_position().x-100,model_.get_p1_position().y+50-236},1);
     }
+    if(model_.get_p1_active())
+    {
+        set.add_sprite(hurtbox_sprite, {model_.get_p1_position().x+100,model_.get_p1_position().y+50-236},1);
+    }
+    if(model_.get_p2_active())
+    {
+        set.add_sprite(hurtbox_sprite, {model_.get_p2_position().x-100,model_.get_p1_position().y+50-236},1);
+    }
 }

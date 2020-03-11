@@ -14,6 +14,7 @@ Controller::Controller(Player p1, Player p2)
         , back({"4", 0})
         , attack({"A", 0})
         , neutral({"5", 0})
+        , block({"X",0})
 {}
 
 void Controller::draw(ge211::Sprite_set& set)
@@ -67,7 +68,12 @@ void Controller::on_key_down(ge211::Key key)
         attack.timestamp = model_.frame;
         p1_buffer.buffer.push_back(attack);
     }
-    
+    if (key == ge211::Key::code('t'))
+    {
+        block.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(block);
+    }
+
     if (key == ge211::Key::code(','))
     {
         back.timestamp = model_.frame;
@@ -82,9 +88,14 @@ void Controller::on_key_down(ge211::Key key)
     if (key == ge211::Key::code('.'))
     {
         attack.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(attack);
+        p2_buffer.buffer.push_back(attack);
     }
-    if (key == ge211::Key::code('f') || model_.game_over())
+    if (key == ge211::Key::code('n'))
+    {
+        block.timestamp = model_.frame;
+        p2_buffer.buffer.push_back(block);
+    }
+    if (key == ge211::Key::code('f'))
         quit();
 }
 
@@ -108,11 +119,12 @@ void Controller::on_key_up(ge211::Key key)
             p1_buffer.buffer.push_back(neutral);
         }
     }
-    // if (key == ge211::Key::code('r'))
-    // {
-    //     neutral.timestamp = model_.frame;
-    //     p1_buffer.buffer.push_back(neutral);
-    // }
+    if (key == ge211::Key::code('n'))
+    {
+        neutral.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(neutral);
+    }
+
     
     if (key == ge211::Key::code(','))
     {
@@ -129,7 +141,11 @@ void Controller::on_key_up(ge211::Key key)
         neutral.timestamp = model_.frame;
         p2_buffer.buffer.push_back(neutral);
     }
-
+    if (key == ge211::Key::code('n'))
+    {
+        neutral.timestamp = model_.frame;
+        p2_buffer.buffer.push_back(neutral);
+    }
 }
 
 void Controller::on_frame(double dt)
@@ -165,13 +181,22 @@ void Controller::on_frame(double dt)
             model_.p1_move({0,0});
         }
 
-        if (p1_buffer.check_move("A"))
+        if (p1_buffer.check_move("A") && p1_buffer.buffer.end()->timestamp>=model_.frame-10)
         {
             model_.p1_attack();
         }
         else
         {
             model_.p1_stop_attack();
+        }
+
+        if (p1_buffer.check_move("X"))
+        {
+            model_.p1_block();
+        }
+        else
+        {
+            model_.p1_stops_block();
         }
     }
     if (p2_buffer.buffer.size() > 0)
@@ -194,7 +219,7 @@ void Controller::on_frame(double dt)
             model_.p2_move({0,0});
         }
 
-        if (p2_buffer.check_move("A"))
+        if (p2_buffer.check_move("A") && p2_buffer.buffer.end()->timestamp>=model_.frame-10)
         {
             model_.p2_attack();
         }
@@ -202,13 +227,23 @@ void Controller::on_frame(double dt)
         {
             model_.p2_stop_attack();
         }
+
+        if (p2_buffer.check_move("X"))
+        {
+            model_.p2_block();
+        }
+        else
+        {
+            model_.p2_stops_block();
+        }
     }
-    // if (p2_buffer.buffer.size() > 0)
-    // {
-    //     if (model_.frame - p2_buffer.buffer[0].timestamp > 8)
-    //     {
-    //         p2_buffer.buffer.erase(p1_buffer.buffer.begin());
-    //     }
-    // }
+    if (model_.game_over())
+    {
+        quit();
+    }
+    //if (model_.frame>model_.p1_attack())
+    //{
+      //  model_.p1_stop_attack();
+    //}
     model_.update(dt);
 }

@@ -33,16 +33,17 @@ void Model::check_for_hit()
 {
     if(p1_.active)
     {
-        if(!(p1_.hurtbox.top_left().x+p1_.hurtbox.width < p2_.hitbox.top_left().x))
+        if(!(p1_.hurtbox.top_left().x + p1_.hurtbox.width < p2_.hitbox.top_left().x) && !p2_.blocking)
         {
-            p2_.health-=10;
+            p2_.health-=1;
         }
+
     }
     if(p2_.active)
     {
-        if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x)
+        if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && !p1_.blocking)
         {
-            p1_.health-=10;
+            p1_.health-=1;
         }
     }
 }
@@ -103,6 +104,7 @@ void Model::update(double dt)
     p1_ = p1_.hitbox_next();
     p2_ = p2_.hitbox_next();
     frame++;
+
 }
 
 void Model::p1_move(ge211::Dimensions pos)
