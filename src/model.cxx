@@ -3,21 +3,48 @@
 Model::Model(Player player1, Player player2, int width, int height)
         : p1_(player1)
         , p2_(player2)
+        , frame(0)
 {}
 
 void Model::p1_attack()
 {
-
+    p1_.active=true;
+    p1_.attack();
+    check_for_hit();
+}
+void Model::p1_stop_attack()
+{
+    p1_.active=false;
+    p1_.attack();
 }
 
 void Model::p2_attack()
 {
-
+    p2_.active=true;
+    p2_.attack();
+    check_for_hit();
 }
-
+void Model::p2_stop_attack()
+{
+    p2_.active=false;
+    p2_.attack();
+}
 void Model::check_for_hit()
 {
-
+    if(p1_.active)
+    {
+        if(!(p1_.hurtbox.top_left().x+p1_.hurtbox.width < p2_.hitbox.top_left().x))
+        {
+            p2_.health-=10;
+        }
+    }
+    if(p2_.active)
+    {
+        if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x)
+        {
+            p1_.health-=10;
+        }
+    }
 }
 
 void Model::p1_block()
@@ -75,6 +102,7 @@ void Model::update(double dt)
 {
     p1_ = p1_.hitbox_next();
     p2_ = p2_.hitbox_next();
+    frame++;
 }
 
 void Model::p1_move(ge211::Dimensions pos)
@@ -83,6 +111,11 @@ void Model::p1_move(ge211::Dimensions pos)
     {
         p1_.hitbox_velocity = pos;
     }
+    // else
+    // {
+    //     ge211::Dimensions position={0, 0};
+    //     p1_.hitbox_velocity = position;
+    // }
 }
 void Model::p2_move(ge211::Dimensions pos)
 {
@@ -90,6 +123,11 @@ void Model::p2_move(ge211::Dimensions pos)
     {
         p2_.hitbox_velocity = pos;
     }
+    // else
+    // {
+    //     ge211::Dimensions position={0, 0};
+    //     p2_.hitbox_velocity = position;
+    // }
 }
 
 ge211::Position Model::get_p1_position() const
@@ -100,4 +138,30 @@ ge211::Position Model::get_p1_position() const
 ge211::Position Model::get_p2_position() const
 {
     return p2_.hitbox.top_left();
+}
+bool Model::get_p1_active() const
+{
+    return p1_.active;
+}
+
+bool Model::get_p2_active() const
+{
+    return p2_.active;
+}
+
+bool Model::game_over()
+{
+    if(p1_.health==0)
+    {
+        return true;
+    }
+    else if(p2_.health==0)
+    {
+        return true;
+    }
+    else if(p1_.health==0 && p2_.health==0)
+    {
+        return true;
+    }
+    return false;
 }

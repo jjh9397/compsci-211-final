@@ -20,10 +20,10 @@ public:
 
     // makes the  1st player do their attack based on if it is charged up or not
     void p1_attack();
-
+    void p1_stop_attack();
     // makes the 2nd player do their attack based on if it is charged up or not
     void p2_attack();
-
+    void p2_stop_attack();
     // checks if either player gets hit by the other and does the necessary animations if they are hit
     void check_for_hit();
 
@@ -51,10 +51,15 @@ public:
 
     void update(double dt);
 
+    int frame;
+
+    bool get_p1_active() const;
+    bool get_p2_active() const;
+
     ge211::Position get_p1_position() const;
 
     ge211::Position get_p2_position() const;
-
+    bool game_over();
 private:
 
     friend struct Test_access;
@@ -63,5 +68,5 @@ private:
     Player p2_;
 
     // declares winner and resets the game to original positions
-    void game_over();
+    //bool game_over();
 };

@@ -2,6 +2,49 @@
 #include "model.hxx"
 #include "view.hxx"
 
+struct Input
+{
+    std::string move;
+    int timestamp;
+};
+
+bool operator==(const Input& lhs, const Input& rhs);
+
+
+struct Input_buffer
+{
+    std::vector<Input> buffer;
+
+    bool check_move(std::string check) const
+    {
+        for (Input input : buffer)
+        {
+            if (check == "A")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
+            if (check == "4")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
+            if (check == "6")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
+
 class Controller : public ge211::Abstract_game
 {
 public:
@@ -20,4 +63,14 @@ protected:
 private:
     Model model_;
     View view_;
+    Input_buffer p1_buffer;
+    Input_buffer p2_buffer;
+    Input front;
+    Input back;
+    Input attack;
+    Input neutral;
+    bool q;
+    bool e;
+    bool comma;
+    bool slash;
 };
