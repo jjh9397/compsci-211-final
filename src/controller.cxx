@@ -26,7 +26,7 @@ void Controller::on_key_down(ge211::Key key)
     {
         model_.p1_move({-10,0});
     }
-    if (key == ge211::Key::code('e'))
+    if (key == ge211::Key::code('e') && !model_.check_collision())
     {
         model_.p1_move({10,0});
     }
@@ -42,6 +42,12 @@ void Controller::on_key_down(ge211::Key key)
     {
         model_.p1_attack();
     }
+    if (key == ge211::Key::code('.'))
+    {
+        model_.p2_attack();
+    }
+    if (key == ge211::Key::code('f') || model_.game_over())
+        quit();
 }
 
 void Controller::on_key_up(ge211::Key key)
@@ -66,6 +72,11 @@ void Controller::on_key_up(ge211::Key key)
     {
         model_.p1_stop_attack();
     }
+    if (key == ge211::Key::code('.'))
+    {
+        model_.p2_stop_attack();
+    }
+
 }
 
 void Controller::on_frame(double dt)
