@@ -20,7 +20,7 @@ public:
 
     // makes the  1st player do their attack based on if it is charged up or not
     void p1_attack();
-
+    void p1_stop_attack();
     // makes the 2nd player do their attack based on if it is charged up or not
     void p2_attack();
 
@@ -50,6 +50,8 @@ public:
     int get_p2_health();
 
     void update(double dt);
+
+    bool get_p1_active() const;
 
     ge211::Position get_p1_position() const;
 

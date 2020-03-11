@@ -2,6 +2,7 @@
 
 Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensions facing)
         : hitbox({hit_pos.x, hit_pos.y,200,250})
+        , hurtbox({hit_pos.x+hitbox.width,hit_pos.y+(hitbox.height/2),1,1})
         , hitbox_velocity({0,0})
         , hurtbox_velocity({0,0})
         , blocking(false)
@@ -26,7 +27,6 @@ Player Player::hitbox_next()
     result.hitbox_velocity = this->hitbox_velocity;
     result.hurtbox = this->hurtbox;
     result.recovery = this->recovery;
-    //fix hurtbox stuff
     return result;
 }
 
@@ -44,35 +44,30 @@ bool Player::recovered()
 
 bool Player::hits_side()
 {
-    if (hitbox.top_left().x < 0 || hitbox.top_left().right_by(hitbox.width).x > 1280)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return hitbox.top_left().x < 0 || hitbox.top_left().right_by(hitbox.width).x > 1280;
 }
 
 bool Player::hits_bottom()
 {
-    if (hitbox.top_left().down_by(hitbox.height).y < 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return hitbox.top_left().down_by(hitbox.height).y < 0;
 }
 
 bool Player::take_damage(int damage) {
     health -= damage;
-    if (health < 0) {
-        return false;
-    } else {
-        return true;
-    }
+    return health >= 0;
 }
 
+void Player::attack()
+{
+    if (active)
+    {
+        ge211::Rectangle hurt = {hurtbox.x+hitbox.width,hurtbox.y+(hitbox.height/2),100,100};
+        hurtbox=hurt;
+    }
+    else
+    {
+        ge211::Rectangle hurt = {hurtbox.x+hitbox.width,hurtbox.y+(hitbox.height/2),1,1};
+        hurtbox=hurt;
+    }
+}
 

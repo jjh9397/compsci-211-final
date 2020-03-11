@@ -14,7 +14,7 @@ struct Player
     bool recovered();
 
     bool take_damage(int damage);
-    
+    void attack();
 
 
     ge211::Rectangle hitbox;
