@@ -38,6 +38,10 @@ void Controller::on_key_down(ge211::Key key)
     {
         model_.p2_move({10,0});
     }
+    if (key == ge211::Key::code('w'))
+    {
+        model_.p1_attack();
+    }
 }
 
 void Controller::on_key_up(ge211::Key key)
@@ -57,6 +61,10 @@ void Controller::on_key_up(ge211::Key key)
     if (key == ge211::Key::code('/'))
     {
         model_.p2_move({0,0});
+    }
+    if (key == ge211::Key::code('w'))
+    {
+        model_.p1_stop_attack();
     }
 }
 

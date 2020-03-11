@@ -3,7 +3,7 @@
 View::View(Model const &model)
     : model_(model)
     , hitbox_sprite({50,100}, {255,255,255})
-    , hurtbox_sprite({10,50}, {255,255,255})
+    , hurtbox_sprite({100,100}, {255,255,255})
     , bg("bg.png")
     , p1_sprite("p1.png")
     , p2_sprite("p2.png")
@@ -23,5 +23,10 @@ void View::draw(ge211::Sprite_set& set)
 {
     set.add_sprite(p1_sprite, model_.get_p1_position(), 1, ge211::Transform::flip_h());
     set.add_sprite(p2_sprite, model_.get_p2_position(), 1);
-    set.add_sprite(bg, {0,234}, 0);
+    set.add_sprite(bg, {0,234}, 0);\
+    if(model_.get_p1_active())
+    {
+        set.add_sprite(hurtbox_sprite, model_.get_p1_position(),1);
+
+    }
 }

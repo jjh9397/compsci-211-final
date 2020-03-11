@@ -7,12 +7,18 @@ Model::Model(Player player1, Player player2, int width, int height)
 
 void Model::p1_attack()
 {
-
+    p1_.active=true;
+    p1_.attack();
+}
+void Model::p1_stop_attack()
+{
+    p1_.active=false;
+    p1_.attack();
 }
 
 void Model::p2_attack()
 {
-
+    p2_.attack();
 }
 
 void Model::check_for_hit()
@@ -100,4 +106,8 @@ ge211::Position Model::get_p1_position() const
 ge211::Position Model::get_p2_position() const
 {
     return p2_.hitbox.top_left();
+}
+bool Model::get_p1_active() const
+{
+    return p1_.active;
 }
