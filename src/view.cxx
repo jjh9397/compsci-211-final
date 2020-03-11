@@ -4,6 +4,7 @@ View::View(Model const &model)
     : model_(model)
     , hitbox_sprite({50,100}, {255,255,255})
     , hurtbox_sprite({100,50}, {255,255,255})
+    , health_red({5,50,}, {255,0,0})
     , bg("bg.png")
     , p1_sprite("p1.png")
     , p2_sprite("p2.png")
@@ -40,4 +41,5 @@ void View::draw(ge211::Sprite_set& set)
     {
         set.add_sprite(hurtbox_sprite, {model_.get_p2_position().x-100,model_.get_p1_position().y+50-236},1);
     }
+    set.add_sprite(health_red, {50,50},1,ge211::Transform::scale_x(model_.get_p1_health()));
 }

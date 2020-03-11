@@ -20,4 +20,5 @@ private:
    ge211::Image_sprite bg;
    ge211::Image_sprite p1_sprite;
    ge211::Image_sprite p2_sprite;
+   ge211::Rectangle_sprite health_red;
 };

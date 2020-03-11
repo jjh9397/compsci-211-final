@@ -89,12 +89,12 @@ bool Model::check_collision()
             p1_.hitbox.bottom_right().y<p2_.hitbox.top_right().y || p2_.hitbox.bottom_right().y<p1_.hitbox.top_right().y);
 }
 
-int Model::get_p1_health()
+int Model::get_p1_health() const
 {
     return p1_.health;
 }
 
-int Model::get_p2_health()
+int Model::get_p2_health() const
 {
     return p2_.health;
 }
@@ -166,4 +166,14 @@ bool Model::game_over()
         return true;
     }
     return false;
+}
+
+int& Model::access_p1_recovery()
+{
+    return p1_.recovery;
+}
+
+int& Model::access_p2_recovery()
+{
+    return p2_.recovery;
 }

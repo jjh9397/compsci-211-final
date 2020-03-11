@@ -44,10 +44,10 @@ public:
     bool check_collision();
 
     // gets the health of the 1st player
-    int get_p1_health();
+    int get_p1_health() const;
 
     // gets the health of the 2nd player
-    int get_p2_health();
+    int get_p2_health() const;
 
     void update(double dt);
 
@@ -60,6 +60,10 @@ public:
 
     ge211::Position get_p2_position() const;
     bool game_over();
+
+    int& access_p1_recovery();
+    int& access_p2_recovery();
+
 private:
 
     friend struct Test_access;
