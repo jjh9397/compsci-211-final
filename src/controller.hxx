@@ -19,7 +19,14 @@ struct Input_buffer
     {
         for (Input input : buffer)
         {
-            if (check == "4" || check == "6")
+            if (check == "4")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
+            if (check == "6")
             {
                 if (input.move == check && input == buffer[buffer.size() - 1])
                 {
@@ -51,5 +58,8 @@ private:
     View view_;
     Input_buffer p1_buffer;
     Input_buffer p2_buffer;
-    Input move;
+    Input front;
+    Input back;
+    Input attack;
+    Input neutral;
 };
