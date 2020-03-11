@@ -69,4 +69,8 @@ private:
     Input back;
     Input attack;
     Input neutral;
+    bool q;
+    bool e;
+    bool comma;
+    bool slash;
 };

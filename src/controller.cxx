@@ -35,14 +35,39 @@ void Controller::on_key_down(ge211::Key key)
 {
     if (key == ge211::Key::code('q'))
     {
-        back.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(back);
+        q = true;
+        //if (e && model_.frame - p1_buffer.buffer.back().timestamp > 8)
+        //{
+         //   neutral.timestamp = model_.frame;
+        //    p1_buffer.buffer.push_back(neutral);
+        //}
+        //else
+        //{
+               back.timestamp = model_.frame;
+              p1_buffer.buffer.push_back(back);
+        //} 
     }
     if (key == ge211::Key::code('e') && !model_.check_collision())
     {
-        front.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(front);
+        e = true;
+        //if (q && model_.frame - p1_buffer.buffer.back().timestamp > 8)
+        //{
+        //    neutral.timestamp = model_.frame;
+        //    p1_buffer.buffer.push_back(neutral);
+        //}
+        //else
+        //{
+           front.timestamp = model_.frame;
+           p1_buffer.buffer.push_back(front);
+        //}
+        
     }
+    if (key == ge211::Key::code('r'))
+    {
+        attack.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(attack);
+    }
+    
     if (key == ge211::Key::code(','))
     {
         back.timestamp = model_.frame;
@@ -53,11 +78,7 @@ void Controller::on_key_down(ge211::Key key)
         front.timestamp = model_.frame;
         p2_buffer.buffer.push_back(front);
     }
-    if (key == ge211::Key::code('r'))
-    {
-        attack.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(attack);
-    }
+    
     if (key == ge211::Key::code('.'))
     {
         attack.timestamp = model_.frame;
@@ -71,14 +92,28 @@ void Controller::on_key_up(ge211::Key key)
 {
     if (key == ge211::Key::code('q'))
     {
-        neutral.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(neutral);
+        q = false;
+        if (!e)
+        {
+            neutral.timestamp = model_.frame;
+            p1_buffer.buffer.push_back(neutral);
+        }
     }
     if (key == ge211::Key::code('e'))
     {
-        neutral.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(neutral);
+        e = false;
+        if (!q)
+        {
+            neutral.timestamp = model_.frame;
+            p1_buffer.buffer.push_back(neutral);
+        }
     }
+    // if (key == ge211::Key::code('r'))
+    // {
+    //     neutral.timestamp = model_.frame;
+    //     p1_buffer.buffer.push_back(neutral);
+    // }
+    
     if (key == ge211::Key::code(','))
     {
         neutral.timestamp = model_.frame;
@@ -88,11 +123,6 @@ void Controller::on_key_up(ge211::Key key)
     {
         neutral.timestamp = model_.frame;
         p2_buffer.buffer.push_back(neutral);
-    }
-    if (key == ge211::Key::code('r'))
-    {
-        neutral.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(neutral);
     }
     if (key == ge211::Key::code('.'))
     {
@@ -104,9 +134,20 @@ void Controller::on_key_up(ge211::Key key)
 
 void Controller::on_frame(double dt)
 {
+    // if (q)
+    // {
+    //     back.timestamp = model_.frame;
+    //     p1_buffer.buffer.push_back(back);
+    // }
+    // if (e)
+    // {
+    //     front.timestamp = model_.frame;
+    //     p1_buffer.buffer.push_back(front);
+    // }
+    
     if (p1_buffer.buffer.size() > 0)
     {
-        if (model_.frame - p1_buffer.buffer[0].timestamp > 8 && p1_buffer.buffer.size() > 1)
+        if (model_.frame - p1_buffer.buffer[0].timestamp > 16 && p1_buffer.buffer.size() > 1)
         {
             p1_buffer.buffer.erase(p1_buffer.buffer.begin());
         }
@@ -135,7 +176,7 @@ void Controller::on_frame(double dt)
     }
     if (p2_buffer.buffer.size() > 0)
     {
-        if (model_.frame - p2_buffer.buffer[0].timestamp > 8 && p2_buffer.buffer.size() > 1)
+        if (model_.frame - p2_buffer.buffer[0].timestamp > 16 && p2_buffer.buffer.size() > 1)
         {
             p2_buffer.buffer.erase(p2_buffer.buffer.begin());
         }
