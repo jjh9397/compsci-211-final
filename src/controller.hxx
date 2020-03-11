@@ -5,7 +5,30 @@
 struct Input
 {
     std::string move;
-    ge211::Time_point timestamp;
+    int timestamp;
+};
+
+bool operator==(const Input& lhs, const Input& rhs);
+
+
+struct Input_buffer
+{
+    std::vector<Input> buffer;
+
+    bool check_move(std::string check) const
+    {
+        for (Input input : buffer)
+        {
+            if (check == "4" || check == "6")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 };
 
 class Controller : public ge211::Abstract_game
@@ -26,11 +49,7 @@ protected:
 private:
     Model model_;
     View view_;
-    std::vector<Input> p1_buffer;
-    std::vector<Input> p2_buffer;
-    Input back;
-    Input down;
-    Input forward;
-    Input attack;
-    Input block;
+    Input_buffer p1_buffer;
+    Input_buffer p2_buffer;
+    Input move;
 };

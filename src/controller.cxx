@@ -1,8 +1,16 @@
 #include "controller.hxx"
 
+bool operator==(const Input& lhs, const Input& rhs)
+{
+    return (lhs.move == rhs.move && lhs.timestamp == rhs.timestamp);
+}
+
 Controller::Controller(Player p1, Player p2)
         : model_(p1, p2, 0, 0)
         , view_(model_)
+        , p1_buffer()
+        , p2_buffer()
+        , move({"5", 0})
 {}
 
 void Controller::draw(ge211::Sprite_set& set)
@@ -24,29 +32,38 @@ void Controller::on_key_down(ge211::Key key)
 {
     if (key == ge211::Key::code('q'))
     {
-        model_.p1_move({-10,0});
-        back.timestamp = ge211::Time_point::now();
-        p1_buffer.push_back(back);
+        //model_.p1_move({-10,0});
+        move.move = "4";
+        move.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(move);
     }
     if (key == ge211::Key::code('e'))
     {
-        model_.p1_move({10,0});
-        forward.timestamp = ge211::Time_point::now();
-        p1_buffer.push_back(forward);
+        //model_.p1_move({10,0});
+        move.move = "6";
+        move.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(move);
     }
     if (key == ge211::Key::code(','))
     {
         model_.p2_move({-10,0});
-        p2_buffer.push_back(back);
+        move.move = "4";
+        move.timestamp = model_.frame;
+        p2_buffer.buffer.push_back(move);
     }
     if (key == ge211::Key::code('/'))
     {
         model_.p2_move({10,0});
-        p2_buffer.push_back(forward);
+        move.move = "6";
+        move.timestamp = model_.frame;
+        p2_buffer.buffer.push_back(move);
     }
-    if (key == ge211::Key::code('w'))
+    if (key == ge211::Key::code('r'))
     {
-        model_.p1_attack();
+        //model_.p1_attack();
+        move.move = "A";
+        move.timestamp = model_.frame;
+        p1_buffer.buffer.push_back(move);
     }
 }
 
@@ -76,5 +93,31 @@ void Controller::on_key_up(ge211::Key key)
 
 void Controller::on_frame(double dt)
 {
+    if (p1_buffer.buffer.size() > 0)
+    {
+        if (model_.frame - p1_buffer.buffer[0].timestamp > 8)
+        {
+            p1_buffer.buffer.erase(p1_buffer.buffer.begin());
+        }
+        if (p1_buffer.check_move("4"))
+        {
+            model_.p1_move({-10,0});
+        }
+        if (p1_buffer.check_move("6"))
+        {
+            model_.p1_move({10,0});
+        }
+        if (p1_buffer.check_move("A"))
+        {
+            model_.p1_attack();
+        }
+    }
+    if (p2_buffer.buffer.size() > 0)
+    {
+        if (model_.frame - p2_buffer.buffer[0].timestamp > 8)
+        {
+            p2_buffer.buffer.erase(p1_buffer.buffer.begin());
+        }
+    }
     model_.update(dt);
 }

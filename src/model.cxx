@@ -3,6 +3,7 @@
 Model::Model(Player player1, Player player2, int width, int height)
         : p1_(player1)
         , p2_(player2)
+        , frame(0)
 {}
 
 void Model::p1_attack()
@@ -81,6 +82,7 @@ void Model::update(double dt)
 {
     p1_ = p1_.hitbox_next();
     p2_ = p2_.hitbox_next();
+    frame++;
 }
 
 void Model::p1_move(ge211::Dimensions pos)

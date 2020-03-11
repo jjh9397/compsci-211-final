@@ -51,6 +51,8 @@ public:
 
     void update(double dt);
 
+    int frame;
+
     bool get_p1_active() const;
 
     ge211::Position get_p1_position() const;
