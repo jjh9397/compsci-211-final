@@ -156,18 +156,18 @@ void Controller::on_frame(double dt)
     //     p1_buffer.buffer.push_back(front);
     // }
     
-    if (p1_buffer.buffer.size() > 0)
+    if (p1_buffer.buffer.size() > 0 && !model_.p1_stun())
     {
         if (model_.frame - p1_buffer.buffer[0].timestamp > 16 && p1_buffer.buffer.size() > 1)
         {
             p1_buffer.buffer.erase(p1_buffer.buffer.begin());
         }
 
-        if (p1_buffer.check_move("4"))
+        if (p1_buffer.check_move("4") && !model_.side_p1())
         {
             model_.p1_move({-10,0});
         }
-        else if (p1_buffer.check_move("6"))
+        else if (p1_buffer.check_move("6")  && !model_.check_collision())
         {
             model_.p1_move({10,0});
         }
@@ -183,7 +183,13 @@ void Controller::on_frame(double dt)
         else
         {
             model_.p1_stop_attack();
+            model_.set_p2_stun(false);
         }
+        if (p1_buffer.buffer.end()->timestamp>=model_.frame-15)
+        {
+            model_.set_p2_stun(true);
+        }
+
 
         if (p1_buffer.check_move("X"))
         {
@@ -194,18 +200,18 @@ void Controller::on_frame(double dt)
             model_.p1_stops_block();
         }
     }
-    if (p2_buffer.buffer.size() > 0)
+    if (p2_buffer.buffer.size() > 0 && !model_.p2_stun())
     {
         if (model_.frame - p2_buffer.buffer[0].timestamp > 16 && p2_buffer.buffer.size() > 1)
         {
             p2_buffer.buffer.erase(p2_buffer.buffer.begin());
         }
 
-        if (p2_buffer.check_move("4"))
+        if (p2_buffer.check_move("4") && !model_.check_collision())
         {
             model_.p2_move({-10,0});
         }
-        else if (p2_buffer.check_move("6"))
+        else if (p2_buffer.check_move("6") && !model_.side_p2())
         {
             model_.p2_move({10,0});
         }
@@ -221,6 +227,11 @@ void Controller::on_frame(double dt)
         else
         {
             model_.p2_stop_attack();
+            model_.set_p1_stun(false);
+        }
+        if (p2_buffer.buffer.end()->timestamp>=model_.frame-15)
+        {
+            model_.set_p1_stun(true);
         }
 
         if (p2_buffer.check_move("X"))
@@ -231,24 +242,32 @@ void Controller::on_frame(double dt)
         {
             model_.p2_stops_block();
         }
+
     }
     if (model_.game_over())
     {
         quit();
     }
-    if (model_.push_p1)
+    if (model_.push_p1 && model_.p1_state())
     {
-        model_.p1_move({-25,0});
+        model_.p1_move({-20,0});
         model_.push_p1=false;
     }
-    if (model_.push_p2)
+    else if(model_.push_p1)
     {
-        model_.p2_move({25,0});
+        model_.p1_move({-3,0});
+        model_.push_p1=false;
+    }
+
+    if (model_.push_p2 && model_.p2_state())
+    {
+        model_.p2_move({20,0});
         model_.push_p2=false;
     }
-    //if (model_.frame>model_.p1_attack())
-    //{
-      //  model_.p1_stop_attack();
-    //}
+    else if(model_.push_p2)
+    {
+        model_.p2_move({3,0});
+        model_.push_p2=false;
+    }
     model_.update(dt);
 }

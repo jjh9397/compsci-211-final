@@ -29,7 +29,7 @@ struct Player
     
     int health;
     int recovery;
-    
+    bool stun;
 
     friend struct Test_access;
 };

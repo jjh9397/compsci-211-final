@@ -65,6 +65,14 @@ public:
     int& access_p2_recovery();
     bool push_p1;
     bool push_p2;
+    bool side_p1();
+    bool side_p2();
+    bool p1_state();
+    bool p2_state();
+    bool p1_stun();
+    bool p2_stun();
+    void set_p1_stun(bool stu);
+    void set_p2_stun(bool stu);
 private:
 
     friend struct Test_access;

@@ -9,6 +9,7 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
         , active(false)
         , health(100)     
         , direction(facing)
+        , stun(false)
 {
 
 }

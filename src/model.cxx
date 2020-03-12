@@ -38,10 +38,12 @@ void Model::check_for_hit()
         if(!(p1_.hurtbox.top_left().x + p1_.hurtbox.width < p2_.hitbox.top_left().x) && !p2_.blocking)
         {
             p2_.health-=1;
+            p2_.stun=true;
+            push_p2=true;
         }
         else if(!(p1_.hurtbox.top_left().x + p1_.hurtbox.width < p2_.hitbox.top_left().x) && p2_.blocking)
         {
-            push_p2=true;
+            push_p1=true;
         }
 
     }
@@ -50,10 +52,12 @@ void Model::check_for_hit()
         if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && !p1_.blocking)
         {
             p1_.health-=1;
+            p1_.stun=true;
+            push_p1=true;
         }
         if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && p1_.blocking)
         {
-            push_p1=true;
+            push_p2=true;
         }
     }
 }
@@ -67,7 +71,10 @@ void Model::p1_stops_block()
 {
     p1_.blocking=false;
 }
-
+bool Model::p1_state()
+{
+    return p1_.blocking;
+}
 void Model::p2_block()
 {
     p2_.blocking=true;
@@ -76,6 +83,11 @@ void Model::p2_block()
 void Model::p2_stops_block()
 {
     p2_.blocking=false;
+}
+
+bool Model::p2_state()
+{
+    return p2_.blocking;
 }
 
 bool Model::health_check()
@@ -177,4 +189,34 @@ int& Model::access_p1_recovery()
 int& Model::access_p2_recovery()
 {
     return p2_.recovery;
+}
+
+bool Model::side_p1()
+{
+    return p1_.hits_side();
+}
+
+bool Model::side_p2()
+{
+    return p2_.hits_side();
+}
+
+bool Model::p1_stun()
+{
+    return p1_.stun;
+}
+
+bool Model::p2_stun()
+{
+    return p2_.stun;
+}
+
+void Model::set_p1_stun(bool stu)
+{
+    p1_.stun=stu;
+}
+
+void Model::set_p2_stun(bool stu)
+{
+    p2_.stun=stu;
 }
