@@ -28,7 +28,7 @@ struct Input_buffer
             }
             if (check == "A")
             {
-                if (input.move == check && input == buffer[buffer.size() - 1])
+                if (input.move == check && (input == buffer[buffer.size() - 1]))
                 {
                     return true;
                 }
@@ -72,11 +72,11 @@ private:
     View view_;
     Input_buffer p1_buffer;
     Input_buffer p2_buffer;
-    Input front;
-    Input back;
-    Input attack;
-    Input neutral;
-    Input block;
+    // Input front;
+    // Input back;
+    // Input attack;
+    // Input neutral;
+    // Input block;
     bool t;
     bool q;
     bool e;

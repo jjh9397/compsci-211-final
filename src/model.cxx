@@ -10,9 +10,17 @@ Model::Model(Player player1, Player player2, int width, int height)
 
 void Model::p1_attack()
 {
-    p1_.active=true;
-    p1_.attack();
-    check_for_hit();
+    if (p1_.recovered())
+    {
+        p1_.active = true;
+        p1_.attack();
+        check_for_hit();
+        p1_.recovery = 16;
+    }
+    if (p1_.recovery == 6)
+    {
+        p1_stop_attack();
+    }
 }
 void Model::p1_stop_attack()
 {
@@ -125,6 +133,14 @@ void Model::update(double dt)
 {
     p1_ = p1_.hitbox_next();
     p2_ = p2_.hitbox_next();
+    if (!p1_.recovered())
+    {
+        p1_.recovery--;
+    }
+    if (!p2_.recovered())
+    {
+        p2_.recovery--;
+    }
     frame++;
 
 }
