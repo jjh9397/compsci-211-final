@@ -76,11 +76,13 @@ void Controller::on_key_down(ge211::Key key)
 
     if (key == ge211::Key::code(','))
     {
+        comma = true;
         back.timestamp = model_.frame;
         p2_buffer.buffer.push_back(back);
     }
     if (key == ge211::Key::code('/'))
     {
+        slash = true;
         front.timestamp = model_.frame;
         p2_buffer.buffer.push_back(front);
     }
@@ -128,13 +130,21 @@ void Controller::on_key_up(ge211::Key key)
     
     if (key == ge211::Key::code(','))
     {
-        neutral.timestamp = model_.frame;
-        p2_buffer.buffer.push_back(neutral);
+        comma = false;
+        if (!slash)
+        {
+            neutral.timestamp = model_.frame;
+            p2_buffer.buffer.push_back(neutral);
+        }
     }
     if (key == ge211::Key::code('/'))
     {
-        neutral.timestamp = model_.frame;
-        p2_buffer.buffer.push_back(neutral);
+        slash = false;
+        if (!comma)
+        {
+            neutral.timestamp = model_.frame;
+            p2_buffer.buffer.push_back(neutral);
+        }
     }
     if (key == ge211::Key::code('n'))
     {
