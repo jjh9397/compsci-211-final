@@ -33,6 +33,13 @@ struct Input_buffer
                     return true;
                 }
             }
+            if (check == "9")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
             if (check == "4")
             {
                 if (input.move == check && input == buffer[buffer.size() - 1])
@@ -79,8 +86,10 @@ private:
     // Input block;
     bool t;
     bool q;
+    bool w;
     bool e;
     bool comma;
+    bool period;
     bool slash;
 
 };

@@ -16,8 +16,10 @@ Controller::Controller(Player p1, Player p2)
         // , neutral_1({"5", 0})
         // , block({"X",0})
         , q(false)
+        , w(false)
         , e(false)
         , comma(false)
+        , period(false)
         , slash(false)
 {}
 
@@ -68,6 +70,12 @@ void Controller::on_key_down(ge211::Key key)
            p1_buffer.buffer.push_back(front);
         //}
         
+    }
+    if (key == ge211::Key::code('w') && !model_.check_collision())
+    {
+        w = true;
+        Input jump = {"9", model_.frame};
+        p1_buffer.buffer.push_back(jump);
     }
     if (key == ge211::Key::code('r'))
     {
@@ -135,6 +143,12 @@ void Controller::on_key_up(ge211::Key key)
             p1_buffer.buffer.push_back(neutral_1);
         }
     }
+    if (key == ge211::Key::code('w'))
+    {
+        w = false;
+        Input neutral_1 = {"5", model_.frame};
+        p1_buffer.buffer.push_back(neutral_1);
+    }
     if (key == ge211::Key::code('t'))
     {
         Input neutral_1 = {"5", model_.frame};
@@ -201,7 +215,15 @@ void Controller::on_frame(double dt)
         }
         else
         {
-            model_.p1_move({0,0});
+            model_.stop_p1();
+        }
+        if (p1_buffer.check_move("9") && !model_.check_collision())
+        {
+            model_.p1_move({10,-20});
+        }
+        else
+        {
+            model_.stop_p1_jump();
         }
 
         if (p1_buffer.check_move("A") && p1_buffer.buffer.end()->timestamp>=model_.frame - 10)
@@ -253,7 +275,7 @@ void Controller::on_frame(double dt)
         }
         else
         {
-            model_.p2_move({0,0});
+            model_.stop_p2();
         }
 
         if (p2_buffer.check_move("A") && p2_buffer.buffer.end()->timestamp>=model_.frame-10)

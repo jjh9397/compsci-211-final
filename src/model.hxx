@@ -18,6 +18,14 @@ public:
     // sets the velocity of the player
     void p2_move(ge211::Dimensions);
 
+    void stop_p1();
+
+    void stop_p2();
+    
+    void stop_p1_jump();
+
+    void stop_p2_jump();
+
     // makes the  1st player do their attack based on if it is charged up or not
     void p1_attack();
     void p1_stop_attack();

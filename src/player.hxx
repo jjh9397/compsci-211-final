@@ -26,10 +26,13 @@ struct Player
     
     bool blocking;
     bool active;
+    bool air;
     
     int health;
     int recovery;
     bool stun;
+
+    int attack_1;
 
     friend struct Test_access;
 };

@@ -11,6 +11,8 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
         , direction(facing)
         , stun(false)
         , recovery(0)
+        , air(false)
+        , attack_1(0)
 {
 
 }
@@ -21,13 +23,16 @@ Player Player::hitbox_next()
 {
     ge211::Position next_hit_pos = {this->hitbox.top_left().x + hitbox_velocity.width, this->hitbox.top_left().y + hitbox_velocity.height};
     Player result(next_hit_pos, hurtbox.top_left(), direction);
-    result.active = this->active;
-    result.blocking = this->blocking;
-    result.direction = this->direction;
-    result.health = this->health;
     result.hitbox_velocity = this->hitbox_velocity;
+    result.blocking = this->blocking;
+    result.active = this->active;
+    result.health = this->health;
+    result.direction = this->direction;    
     result.hurtbox = this->hurtbox;
+    result.stun = this->stun;
     result.recovery = this->recovery;
+    result.air = this->air;
+    result.attack_1 = this->attack_1;
     return result;
 }
 
