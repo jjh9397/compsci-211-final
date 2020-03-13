@@ -146,13 +146,9 @@ void Model::update(double dt)
         p1_.hitbox_velocity.height += 5;
         p1_.air = true;
     }
-    else if (p1_.hitbox.top_left().y >= 470 && p1_.air)
+    else if (p1_.hitbox.top_left().y > 470 && p1_.air)
     {
         p1_.hitbox_velocity.height = 0;
-    }
-    else if (p1_.hitbox.top_left().y < 450)
-    {
-        std::cout << "lmao";
     }
     
     if (p2_.hitbox.top_left().y < 470)
@@ -160,7 +156,7 @@ void Model::update(double dt)
         p2_.hitbox_velocity.height += 5;
         p2_.air = true;
     }
-    else if (p2_.hitbox.top_left().y >= 470 && p2_.air)
+    else if (p2_.hitbox.top_left().y > 470 && p2_.air)
     {
         p2_.hitbox_velocity.height = 0;
     }
@@ -196,12 +192,18 @@ void Model::p2_move(ge211::Dimensions pos)
 
 void Model::stop_p1()
 {
-    p1_.hitbox_velocity.width = 0;
+    if (!p1_.air)
+    {
+        p1_.hitbox_velocity.width = 0;
+    }
 }
 
 void Model::stop_p2()
 {
-    p2_.hitbox_velocity.width = 0;
+    if (!p2_.air)
+    {
+        p2_.hitbox_velocity.width = 0;
+    }
 }
 
 void Model::stop_p1_jump()

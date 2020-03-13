@@ -22,6 +22,11 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
 Player Player::hitbox_next()
 {
     ge211::Position next_hit_pos = {this->hitbox.top_left().x + hitbox_velocity.width, this->hitbox.top_left().y + hitbox_velocity.height};
+    if (next_hit_pos.y > 470)
+    {
+        next_hit_pos.y = 470;
+        air = false;
+    }
     Player result(next_hit_pos, hurtbox.top_left(), direction);
     result.hitbox_velocity = this->hitbox_velocity;
     result.blocking = this->blocking;
