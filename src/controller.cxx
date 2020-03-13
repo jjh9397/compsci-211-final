@@ -104,7 +104,12 @@ void Controller::on_key_down(ge211::Key key)
         //front.timestamp = model_.frame;
         p2_buffer.buffer.push_back(front);
     }
-    
+    if (key == ge211::Key::code('.') && !model_.check_collision())
+    {
+        period = true;
+        Input jump = {"9", model_.frame};
+        p2_buffer.buffer.push_back(jump);
+    }
     if (key == ge211::Key::code('m'))
     {
         Input attack = {"A", model_.frame};
@@ -177,6 +182,12 @@ void Controller::on_key_up(ge211::Key key)
             p2_buffer.buffer.push_back(neutral_2);
         }
     }
+    if (key == ge211::Key::code('.'))
+    {
+        period = false;
+        Input neutral = {"5", model_.frame};
+        p2_buffer.buffer.push_back(neutral);
+    }
     if (key == ge211::Key::code('n'))
     {
         Input neutral_2 = {"5", model_.frame};
@@ -205,11 +216,11 @@ void Controller::on_frame(double dt)
             p1_buffer.buffer.erase(p1_buffer.buffer.begin());
         }
 
-        if (p1_buffer.check_move("4") && !model_.side_p1())
+        if (p1_buffer.check_move("4") && !model_.side_p1() && model_.access_p1_recovery() == 0)
         {
             model_.p1_move({-10,0});
         }
-        else if (p1_buffer.check_move("6")  && !model_.check_collision())
+        else if (p1_buffer.check_move("6") && !model_.side_p1() && !model_.check_collision() && model_.access_p1_recovery() == 0)
         {
             model_.p1_move({10,0});
         }
@@ -219,14 +230,14 @@ void Controller::on_frame(double dt)
         }
         if (p1_buffer.check_move("9") && !model_.check_collision())
         {
-            model_.p1_move({10,-20});
+            model_.p1_jump();
         }
-        else
+        else if (model_.p1_air())
         {
-            model_.stop_p1_jump();
+            model_.p1_jump();
         }
 
-        if (p1_buffer.check_move("A") && p1_buffer.buffer.end()->timestamp>=model_.frame - 10)
+        if (p1_buffer.check_move("A") && p1_buffer.buffer.end()->timestamp>=model_.frame - 10 && !model_.p1_air())
         {
             model_.p1_attack();
         }
@@ -265,11 +276,11 @@ void Controller::on_frame(double dt)
             p2_buffer.buffer.erase(p2_buffer.buffer.begin());
         }
 
-        if (p2_buffer.check_move("4") && !model_.check_collision())
+        if (p2_buffer.check_move("4") && !model_.side_p2() && model_.access_p2_recovery() == 0)
         {
             model_.p2_move({-10,0});
         }
-        else if (p2_buffer.check_move("6") && !model_.side_p2())
+        else if (p2_buffer.check_move("6") && !model_.check_collision() && !model_.side_p2() && model_.access_p2_recovery() == 0)
         {
             model_.p2_move({10,0});
         }
@@ -277,8 +288,16 @@ void Controller::on_frame(double dt)
         {
             model_.stop_p2();
         }
+        if (p2_buffer.check_move("9") && !model_.check_collision())
+        {
+            model_.p2_jump();
+        }
+        else if (model_.p2_air())
+        {
+            model_.p2_jump();
+        }
 
-        if (p2_buffer.check_move("A") && p2_buffer.buffer.end()->timestamp>=model_.frame-10)
+        if (p2_buffer.check_move("A") && p2_buffer.buffer.end()->timestamp>=model_.frame-10 && !model_.p2_air())
         {
             model_.p2_attack();
         }

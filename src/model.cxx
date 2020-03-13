@@ -25,7 +25,7 @@ void Model::p1_attack()
 void Model::p1_stop_attack()
 {
     p1_.active=false;
-    p1_.attack();
+    //p1_.attack();
 }
 
 void Model::p2_attack()
@@ -143,7 +143,7 @@ void Model::update(double dt)
 
     if (p1_.hitbox.top_left().y < 470)
     {
-        p1_.hitbox_velocity.height += 5;
+        p1_.hitbox_velocity.height += 3;
         p1_.air = true;
     }
     else if (p1_.hitbox.top_left().y > 470 && p1_.air)
@@ -153,7 +153,7 @@ void Model::update(double dt)
     
     if (p2_.hitbox.top_left().y < 470)
     {
-        p2_.hitbox_velocity.height += 5;
+        p2_.hitbox_velocity.height += 3;
         p2_.air = true;
     }
     else if (p2_.hitbox.top_left().y > 470 && p2_.air)
@@ -196,6 +196,44 @@ void Model::stop_p1()
     {
         p1_.hitbox_velocity.width = 0;
     }
+}
+
+void Model::p1_jump()
+{
+    if (!p1_.air)
+    {
+        p1_move({10, -25});
+    }
+    p1_.jump++;
+    if (p1_.jump > 15)
+    {
+        stop_p1_jump();
+        p1_.jump = 0;
+    }
+}
+
+void Model::p2_jump()
+{
+    if (!p2_.air)
+    {
+        p2_move({-10, -25});
+    }
+    p2_.jump++;
+    if (p2_.jump > 15)
+    {
+        stop_p2_jump();
+        p2_.jump = 0;
+    }
+}
+
+bool Model::p1_air()
+{
+    return p1_.air;
+}
+
+bool Model::p2_air()
+{
+    return p2_.air;
 }
 
 void Model::stop_p2()

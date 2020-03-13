@@ -13,6 +13,7 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
         , recovery(0)
         , air(false)
         , attack_1(0)
+        , jump(0)
 {
 
 }
@@ -38,6 +39,7 @@ Player Player::hitbox_next()
     result.recovery = this->recovery;
     result.air = this->air;
     result.attack_1 = this->attack_1;
+    result.jump = this->jump;
     return result;
 }
 

@@ -32,6 +32,7 @@ struct Player
     int recovery;
     bool stun;
 
+    int jump;
     int attack_1;
 
     friend struct Test_access;

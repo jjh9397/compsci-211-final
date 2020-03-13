@@ -21,10 +21,18 @@ public:
     void stop_p1();
 
     void stop_p2();
+
+    void p1_jump();
+
+    void p2_jump();
     
     void stop_p1_jump();
 
     void stop_p2_jump();
+
+    bool p1_air();
+
+    bool p2_air();
 
     // makes the  1st player do their attack based on if it is charged up or not
     void p1_attack();
