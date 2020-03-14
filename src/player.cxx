@@ -59,7 +59,7 @@ bool Player::recovered()
 
 bool Player::hits_side()
 {
-    return hitbox.top_left().x < 0 || hitbox.top_left().right_by(hitbox.width).x > 1280;
+    return hitbox_next().hitbox.top_left().x < 0 || hitbox_next().hitbox.top_left().right_by(hitbox.width).x > 1280;
 }
 
 bool Player::hits_bottom()

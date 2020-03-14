@@ -6,6 +6,8 @@ Model::Model(Player player1, Player player2, int width, int height)
         , frame(0)
         , push_p1(false)
         , push_p2(false)
+        , collide_p1(false)
+        , collide_p2(false)
 {}
 
 void Model::p1_attack()
@@ -213,7 +215,16 @@ void Model::update(double dt)
     {
         p2_.recovery--;
     }
-
+    if (p1_.hits_side())
+    {
+        //collide_p1 = true;
+        p1_move({0,0});
+    }
+    if (p2_.hits_side())
+    {
+        //collide_p2 = true;
+        p2_move({0,0});
+    }
     if (p1_.hitbox.top_left().y < 470)
     {
         p1_.hitbox_velocity.height += 3;

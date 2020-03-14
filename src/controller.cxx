@@ -382,5 +382,16 @@ void Controller::on_frame(double dt)
         model_.p2_move({3,0});
         model_.push_p2=false;
     }
+
+    if (model_.collide_p1)
+    {
+        model_.p1_move({5,0});
+        model_.collide_p1 = false;
+    }
+    if (model_.collide_p2)
+    {
+        model_.p2_move({-5,0});
+        model_.collide_p2 = false;
+    }
     model_.update(dt);
 }
