@@ -6,7 +6,7 @@ bool operator==(const Input& lhs, const Input& rhs)
 }
 
 Controller::Controller(Player p1, Player p2)
-        : model_(p1, p2, 0, 0)
+        : model_(p1, p2)
         , view_(model_)
         , p1_buffer()
         , p2_buffer()
