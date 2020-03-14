@@ -98,7 +98,7 @@ void Controller::on_key_down(ge211::Key key)
         p1_buffer.buffer.push_back(block_1);
     }
 
-    if (key == ge211::Key::code(','))
+    if (key == ge211::Key::code(',') && !model_.check_collision())
     {
         comma = true;
         Input back_2 = {"4", model_.frame};
@@ -298,11 +298,11 @@ void Controller::on_frame(double dt)
             p2_buffer.buffer.erase(p2_buffer.buffer.begin());
         }
 
-        if (p2_buffer.check_move("4") && !model_.side_p2() && model_.access_p2_recovery() == 0)
+        if (p2_buffer.check_move("4") && !model_.side_p2() && !model_.check_collision() && model_.access_p2_recovery() == 0)
         {
             model_.p2_move({-10,0});
         }
-        else if (p2_buffer.check_move("6") && !model_.check_collision() && !model_.side_p2() && model_.access_p2_recovery() == 0)
+        else if (p2_buffer.check_move("6") && !model_.side_p2() && model_.access_p2_recovery() == 0)
         {
             model_.p2_move({10,0});
         }
