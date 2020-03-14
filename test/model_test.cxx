@@ -139,7 +139,52 @@ TEST_CASE("mix p1 win and break block")
     CHECK(model.get_p2_health()==0);
 }
 
-TEST_CASE("")
+TEST_CASE("block working")
 {
+    Player p1({400,470},{1,0});
+    Player p2({900,470},{-1,0});
+    Model model(p1,p2);
+    model.p1_move({300,0});
+    model.p2_move({-150,0});
+    model.update(1);
+    model.p1_move({0,0});
+    model.p2_move({0,0});
+    model.update(1);
+    model.p1_attack();
+    model.access_p1_recovery()=0;
+    model.update(1);
+    model.p2_block();
+    model.update(1);
+    model.p1_attack();
+    model.update(1);
+    CHECK(model.get_p2_health()==95);
+}
 
+TEST_CASE("recovery working")
+{
+    Player p1({400,470},{1,0});
+    Player p2({900,470},{-1,0});
+    Model model(p1,p2);
+    model.p1_move({300,0});
+    model.p2_move({-150,0});
+    model.update(1);
+    model.p1_move({0,0});
+    model.p2_move({0,0});
+    model.update(1);
+    model.p1_attack();
+    model.update(1);
+    model.p1_attack();
+    model.update(1);
+    CHECK(model.get_p2_health()==95);
+}
+
+TEST_CASE("attack misses")
+{
+    Player p1({400,470},{1,0});
+    Player p2({900,470},{-1,0});
+    Model model(p1,p2);
+    model.p1_attack();
+    model.p2_attack();
+    CHECK(model.get_p1_health()==100);
+    CHECK(model.get_p2_health()==100);
 }
