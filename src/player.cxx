@@ -1,6 +1,6 @@
 #include "player.hxx"
 
-Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensions facing)
+Player::Player(ge211::Position hit_pos, ge211::Dimensions facing)
         : hitbox({hit_pos.x, hit_pos.y,150,210})
         , hurtbox({hit_pos.x+hitbox.width,hit_pos.y+(hitbox.height/2),1,1})
         , hitbox_velocity({0,0})
@@ -14,12 +14,11 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
         , air(false)
         , attack_1(0)
         , jump(0)
+        , attack_1_air(0)
 {
 
 }
 
-
-// change these to return rectangles??
 Player Player::hitbox_next()
 {
     ge211::Position next_hit_pos = {this->hitbox.top_left().x + hitbox_velocity.width, this->hitbox.top_left().y + hitbox_velocity.height};
@@ -28,7 +27,7 @@ Player Player::hitbox_next()
         next_hit_pos.y = 470;
         air = false;
     }
-    Player result(next_hit_pos, hurtbox.top_left(), direction);
+    Player result(next_hit_pos, direction);
     result.hitbox_velocity = this->hitbox_velocity;
     result.blocking = this->blocking;
     result.active = this->active;
@@ -40,34 +39,18 @@ Player Player::hitbox_next()
     result.air = this->air;
     result.attack_1 = this->attack_1;
     result.jump = this->jump;
+    result.attack_1_air = this->attack_1_air;
     return result;
 }
 
-ge211::Position Player::hurtbox_next()
-{
-    ge211::Position result = hurtbox.top_left();
-    result += hurtbox_velocity;
-    return result;
-}
-
-bool Player::recovered()
+bool Player::recovered() const
 {
     return recovery == 0;
 }
 
-bool Player::hits_side()
+bool Player::hits_side() 
 {
-    return hitbox.top_left().x < 0 || hitbox.top_left().right_by(hitbox.width).x > 1280;
-}
-
-bool Player::hits_bottom()
-{
-    return hitbox.top_left().down_by(hitbox.height).y < 0;
-}
-
-bool Player::take_damage(int damage) {
-    health -= damage;
-    return health >= 0;
+    return hitbox_next().hitbox.top_left().x < 0 || hitbox_next().hitbox.top_left().right_by(hitbox.width).x > 1280;
 }
 
 void Player::attack()
@@ -84,3 +67,16 @@ void Player::attack()
     }
 }
 
+void Player::start_attack_1_air()
+{
+    if (attack_1_air != 0)
+    {
+        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,200,120};
+        hurtbox_attack_1_air=hurt;
+    }
+    else
+    {
+        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,1,1};
+        hurtbox_attack_1_air=hurt;
+    }
+}

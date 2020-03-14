@@ -10,6 +10,7 @@ View::View(Model const &model)
     , p2_sprite("p2.png")
     , block_sprite("block.png")
     , attack_1_sprite("attack_1.png")
+    , attack_1_air_sprite("attack_1_air.png")
 {}
 
 ge211::Dimensions View::initial_window_dimensions() const
@@ -33,8 +34,18 @@ void View::draw(ge211::Sprite_set& set)
     }
     if(model_.get_p2_active())
     {
-        set.add_sprite(attack_1_sprite, {model_.get_p2_position().x-150,model_.get_p1_position().y+50-236},1);
+        set.add_sprite(attack_1_sprite, {model_.get_p2_position().x-150,model_.get_p2_position().y+50-236},1);
     }
+    
+    if (model_.get_p1_attack_1_air() != 0)
+    {
+        set.add_sprite(attack_1_air_sprite,{model_.get_p1_position().x+100,model_.get_p1_position().y+75-236},1, ge211::Transform::rotation(30));
+    }
+    if (model_.get_p2_attack_1_air() != 0)
+    {
+        set.add_sprite(attack_1_air_sprite,{model_.get_p2_position().x-100,model_.get_p2_position().y+75-236},1, ge211::Transform::rotation(30));
+    }
+
     if (model_.get_p1_block())
     {
         set.add_sprite(block_sprite, {model_.get_p1_position().x+50,model_.get_p1_position().y+50-300},1, ge211::Transform::flip_h());

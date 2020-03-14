@@ -9,9 +9,9 @@ public:
 
    void draw(ge211::Sprite_set& set);
 
-    ge211::Dimensions initial_window_dimensions() const;
+   ge211::Dimensions initial_window_dimensions() const;
 
-    std::string initial_window_title() const;
+   std::string initial_window_title() const;
 
 private:
    Model const& model_;
@@ -23,4 +23,5 @@ private:
    ge211::Rectangle_sprite health_red;
    ge211::Image_sprite block_sprite;
    ge211::Image_sprite attack_1_sprite;
+   ge211::Image_sprite attack_1_air_sprite;
 };
