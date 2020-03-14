@@ -79,9 +79,17 @@ void Controller::on_key_down(ge211::Key key)
     }
     if (key == ge211::Key::code('r'))
     {
-        Input attack_1 = {"A", model_.frame};
-        //attack.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(attack_1);
+        if (model_.p1_air())
+        {
+            Input attack_air_1_1 = {"j.A", model_.frame};
+            p1_buffer.buffer.push_back(attack_air_1_1);
+        }
+        else
+        {
+            Input attack_1 = {"A", model_.frame};
+            //attack.timestamp = model_.frame;
+            p1_buffer.buffer.push_back(attack_1);
+        }
     }
     if (key == ge211::Key::code('t'))
     {
@@ -112,8 +120,16 @@ void Controller::on_key_down(ge211::Key key)
     }
     if (key == ge211::Key::code('m'))
     {
-        Input attack_2 = {"A", model_.frame};
-        p2_buffer.buffer.push_back(attack_2);
+        if (model_.p2_air())
+        {
+            Input attack_air_1_2 = {"j.A", model_.frame};
+            p2_buffer.buffer.push_back(attack_air_1_2);
+        }
+        else
+        {
+            Input attack_2 = {"A", model_.frame};
+            p2_buffer.buffer.push_back(attack_2);
+        }    
     }
     if (key == ge211::Key::code('n'))
     {
@@ -235,7 +251,14 @@ void Controller::on_frame(double dt)
         {
             model_.p1_jump();
         }
-
+        if (p1_buffer.check_move("j.A") && model_.p1_air())
+        {
+            model_.p1_attack_1_air();
+        }
+        else if (model_.get_p1_attack_1_air() != 0)
+        {
+            model_.p1_attack_1_air();
+        }
         if (p1_buffer.check_move("A") && p1_buffer.buffer.end()->timestamp>=model_.frame - 10 && !model_.p1_air())
         {
             model_.p1_attack();
@@ -295,7 +318,14 @@ void Controller::on_frame(double dt)
         {
             model_.p2_jump();
         }
-
+        if (p2_buffer.check_move("j.A") && model_.p2_air())
+        {
+            model_.p2_attack_1_air();
+        }
+        else if (model_.get_p2_attack_1_air() != 0)
+        {
+            model_.p2_attack_1_air();
+        }
         if (p2_buffer.check_move("A") && p2_buffer.buffer.end()->timestamp>=model_.frame-10 && !model_.p2_air())
         {
             model_.p2_attack();

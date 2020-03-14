@@ -43,6 +43,11 @@ public:
     // checks if either player gets hit by the other and does the necessary animations if they are hit
     void check_for_hit();
 
+    void p1_attack_1_air();
+    void p2_attack_1_air();
+    int get_p1_attack_1_air() const;
+    int get_p2_attack_1_air() const;
+
     // makes the 1st player go into a state of blocking
     void p1_block();
 

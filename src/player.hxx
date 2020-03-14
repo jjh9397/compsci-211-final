@@ -19,6 +19,7 @@ struct Player
 
     ge211::Rectangle hitbox;
     ge211::Rectangle hurtbox;
+    ge211::Rectangle hurtbox_attack_1_air;
     ge211::Dimensions hitbox_velocity;
     ge211::Dimensions hurtbox_velocity;
     int hurtbox_angular_velocity;
@@ -34,6 +35,8 @@ struct Player
 
     int jump;
     int attack_1;
+    int attack_1_air;
+    void start_attack_1_air();
 
     friend struct Test_access;
 };

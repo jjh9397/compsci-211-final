@@ -61,7 +61,17 @@ void Model::check_for_hit()
         {
             push_p1=true;
         }
-
+        
+        if(!(p1_.hurtbox_attack_1_air.top_left().x + p1_.hurtbox_attack_1_air.width < p2_.hitbox.top_left().x))// && !p2_.air)
+        {
+            //p2_.health-=10;
+            p2_.stun=true;
+            push_p2=true;
+        }
+        else if(!(p1_.hurtbox_attack_1_air.top_left().x + p1_.hurtbox_attack_1_air.width < p2_.hitbox.top_left().x))// && p2_.air)
+        {
+            push_p1=true;
+        }
     }
     if(p2_.active)
     {
@@ -71,11 +81,61 @@ void Model::check_for_hit()
             p1_.stun=true;
             push_p1=true;
         }
-        if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && p1_.blocking)
+        else if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && p1_.blocking)
+        {
+            push_p2=true;
+        }
+       
+       if(p2_.hurtbox_attack_1_air.top_left().x <= p1_.hitbox.top_right().x)// && !p1_.air)
+        {
+            p1_.health-=10;
+            p1_.stun=true;
+            push_p1=true;
+        }
+        else if(p2_.hurtbox_attack_1_air.top_left().x <= p1_.hitbox.top_right().x)// && p1_.air)
         {
             push_p2=true;
         }
     }
+}
+
+void Model::p1_attack_1_air()
+{
+    p1_.attack_1_air++;
+    if (p1_.recovered())
+    {
+        p1_.start_attack_1_air();
+        check_for_hit();
+        p1_.recovery = 25;
+    }
+    if (p1_.attack_1_air > 20)
+    {
+        p1_.attack_1_air = 0;
+    }
+}
+void Model::p2_attack_1_air()
+{
+    p2_.attack_1_air++;
+    if (p2_.recovered())
+    {
+        p2_.start_attack_1_air();
+        check_for_hit();
+        p2_.recovery = 25;
+    }
+    if (p2_.attack_1_air > 20)
+    {
+        p2_.attack_1_air = 0;
+    }
+}
+
+int Model::get_p1_attack_1_air() const
+{
+    return p1_.attack_1_air;
+}
+
+int Model::get_p2_attack_1_air() const
+{
+    return p2_.attack_1_air;
 }
 
 void Model::p1_block()

@@ -14,6 +14,7 @@ Player::Player(ge211::Position hit_pos, ge211::Position hurt_pos, ge211::Dimensi
         , air(false)
         , attack_1(0)
         , jump(0)
+        , attack_1_air(0)
 {
 
 }
@@ -40,6 +41,7 @@ Player Player::hitbox_next()
     result.air = this->air;
     result.attack_1 = this->attack_1;
     result.jump = this->jump;
+    result.attack_1_air = this->attack_1_air;
     return result;
 }
 
@@ -84,3 +86,16 @@ void Player::attack()
     }
 }
 
+void Player::start_attack_1_air()
+{
+    if (attack_1_air != 0)
+    {
+        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,200,120};
+        hurtbox_attack_1_air=hurt;
+    }
+    else
+    {
+        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,1,1};
+        hurtbox_attack_1_air=hurt;
+    }
+}

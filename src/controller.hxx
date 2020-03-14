@@ -26,6 +26,13 @@ struct Input_buffer
                     return true;
                 }
             }
+            if (check == "j.A")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
             if (check == "A")
             {
                 if (input.move == check && (input == buffer[buffer.size() - 1]))
