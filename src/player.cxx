@@ -19,8 +19,6 @@ Player::Player(ge211::Position hit_pos, ge211::Dimensions facing)
 
 }
 
-
-// change these to return rectangles??
 Player Player::hitbox_next()
 {
     ge211::Position next_hit_pos = {this->hitbox.top_left().x + hitbox_velocity.width, this->hitbox.top_left().y + hitbox_velocity.height};
@@ -45,31 +43,14 @@ Player Player::hitbox_next()
     return result;
 }
 
-ge211::Position Player::hurtbox_next()
-{
-    ge211::Position result = hurtbox.top_left();
-    result += hurtbox_velocity;
-    return result;
-}
-
-bool Player::recovered()
+bool Player::recovered() const
 {
     return recovery == 0;
 }
 
-bool Player::hits_side()
+bool Player::hits_side() 
 {
     return hitbox_next().hitbox.top_left().x < 0 || hitbox_next().hitbox.top_left().right_by(hitbox.width).x > 1280;
-}
-
-bool Player::hits_bottom()
-{
-    return hitbox.top_left().down_by(hitbox.height).y < 0;
-}
-
-bool Player::take_damage(int damage) {
-    health -= damage;
-    return health >= 0;
 }
 
 void Player::attack()

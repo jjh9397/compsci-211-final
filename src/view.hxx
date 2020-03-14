@@ -9,9 +9,9 @@ public:
 
    void draw(ge211::Sprite_set& set);
 
-    ge211::Dimensions initial_window_dimensions() const;
+   ge211::Dimensions initial_window_dimensions() const;
 
-    std::string initial_window_title() const;
+   std::string initial_window_title() const;
 
 private:
    Model const& model_;

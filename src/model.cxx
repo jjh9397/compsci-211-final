@@ -173,21 +173,6 @@ bool Model::p2_state()
     return p2_.blocking;
 }
 
-bool Model::health_check()
-{
-    if (p1_.health<=0)
-    {
-        winner_=2;
-        return true;
-    }
-    else if (p2_.health<=0)
-    {
-        winner_=1;
-        return true;
-    }
-    return false;
-}
-
 bool Model::check_collision()
 {
     return !(p1_.hitbox.top_right().x<p2_.hitbox.top_left().x || p2_.hitbox.top_right().x<p1_.hitbox.top_left().x ||
