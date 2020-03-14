@@ -10,7 +10,7 @@ class Model
 public:
 
     // constructs a model with two players and a width and height for the dimensions of the stage
-    explicit Model(Player player1, Player player2, int width, int height);
+    explicit Model(Player player1, Player player2);
 
     // sets the velocity of the player
     void p1_move(ge211::Dimensions);

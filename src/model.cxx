@@ -1,6 +1,6 @@
 #include "model.hxx"
 
-Model::Model(Player player1, Player player2, int width, int height)
+Model::Model(Player player1, Player player2)
         : p1_(player1)
         , p2_(player2)
         , frame(0)
