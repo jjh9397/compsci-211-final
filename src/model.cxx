@@ -62,13 +62,16 @@ void Model::check_for_hit()
             push_p1=true;
         }
         
-        if(!(p1_.hurtbox_attack_1_air.top_left().x + p1_.hurtbox_attack_1_air.width < p2_.hitbox.top_left().x))// && !p2_.air)
+    }
+    if (p1_.attack_1_air != 0)
+    {
+        if(!(p1_.hurtbox_attack_1_air.top_left().x + p1_.hurtbox_attack_1_air.width < p2_.hitbox.top_left().x) && !p2_.air)
         {
-            //p2_.health-=10;
+            p2_.health-=10;
             p2_.stun=true;
             push_p2=true;
         }
-        else if(!(p1_.hurtbox_attack_1_air.top_left().x + p1_.hurtbox_attack_1_air.width < p2_.hitbox.top_left().x))// && p2_.air)
+        else if(!(p1_.hurtbox_attack_1_air.top_left().x + p1_.hurtbox_attack_1_air.width < p2_.hitbox.top_left().x) && p2_.air)
         {
             push_p1=true;
         }
@@ -84,15 +87,17 @@ void Model::check_for_hit()
         else if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && p1_.blocking)
         {
             push_p2=true;
-        }
-       
-       if(p2_.hurtbox_attack_1_air.top_left().x <= p1_.hitbox.top_right().x)// && !p1_.air)
+        }   
+    }
+    if (p2_.attack_1_air != 0)
+    {
+        if(p2_.hurtbox_attack_1_air.top_left().x <= p1_.hitbox.top_right().x && !p1_.air)
         {
             p1_.health-=10;
             p1_.stun=true;
             push_p1=true;
         }
-        else if(p2_.hurtbox_attack_1_air.top_left().x <= p1_.hitbox.top_right().x)// && p1_.air)
+        else if(p2_.hurtbox_attack_1_air.top_left().x <= p1_.hitbox.top_right().x && p1_.air)
         {
             push_p2=true;
         }
