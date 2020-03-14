@@ -19,7 +19,21 @@ struct Input_buffer
     {
         for (Input input : buffer)
         {
+            if (check == "X")
+            {
+                if (input.move == check && input == buffer[buffer.size() - 1])
+                {
+                    return true;
+                }
+            }
             if (check == "A")
+            {
+                if (input.move == check && (input == buffer[buffer.size() - 1]))
+                {
+                    return true;
+                }
+            }
+            if (check == "9")
             {
                 if (input.move == check && input == buffer[buffer.size() - 1])
                 {
@@ -65,12 +79,17 @@ private:
     View view_;
     Input_buffer p1_buffer;
     Input_buffer p2_buffer;
-    Input front;
-    Input back;
-    Input attack;
-    Input neutral;
+    // Input front;
+    // Input back;
+    // Input attack;
+    // Input neutral;
+    // Input block;
+    bool t;
     bool q;
+    bool w;
     bool e;
     bool comma;
+    bool period;
     bool slash;
+
 };
