@@ -74,7 +74,7 @@ void Player::attack()
 {
     if (active)
     {
-        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,100,50};
+        ge211::Rectangle hurt = {hitbox.x+(hitbox.width*direction.width),hurtbox.y,150,60};
         hurtbox=hurt;
     }
     else

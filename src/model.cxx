@@ -30,14 +30,22 @@ void Model::p1_stop_attack()
 
 void Model::p2_attack()
 {
-    p2_.active=true;
-    p2_.attack();
-    check_for_hit();
+    if (p2_.recovered())
+    {
+        p2_.active = true;
+        p2_.attack();
+        check_for_hit();
+        p2_.recovery = 16;
+    }
+    if (p2_.recovery == 6)
+    {
+        p2_stop_attack();
+    }
 }
 void Model::p2_stop_attack()
 {
     p2_.active=false;
-    p2_.attack();
+    //p2_.attack();
 }
 void Model::check_for_hit()
 {
@@ -45,7 +53,7 @@ void Model::check_for_hit()
     {
         if(!(p1_.hurtbox.top_left().x + p1_.hurtbox.width < p2_.hitbox.top_left().x) && !p2_.blocking)
         {
-            p2_.health-=1;
+            p2_.health-=5;
             p2_.stun=true;
             push_p2=true;
         }
@@ -59,7 +67,7 @@ void Model::check_for_hit()
     {
         if(p2_.hurtbox.top_left().x <= p1_.hitbox.top_right().x && !p1_.blocking)
         {
-            p1_.health-=1;
+            p1_.health-=5;
             p1_.stun=true;
             push_p1=true;
         }

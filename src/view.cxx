@@ -9,6 +9,7 @@ View::View(Model const &model)
     , p1_sprite("p1.png")
     , p2_sprite("p2.png")
     , block_sprite("block.png")
+    , attack_1_sprite("attack_1.png")
 {}
 
 ge211::Dimensions View::initial_window_dimensions() const
@@ -28,11 +29,11 @@ void View::draw(ge211::Sprite_set& set)
     set.add_sprite(bg, {0,0}, 0);
     if(model_.get_p1_active())
     {
-        set.add_sprite(hurtbox_sprite, {model_.get_p1_position().x+100,model_.get_p1_position().y+50-236},1);
+        set.add_sprite(attack_1_sprite, {model_.get_p1_position().x+50,model_.get_p1_position().y+50-236},1,  ge211::Transform::flip_h());
     }
     if(model_.get_p2_active())
     {
-        set.add_sprite(hurtbox_sprite, {model_.get_p2_position().x-100,model_.get_p1_position().y+50-236},1);
+        set.add_sprite(attack_1_sprite, {model_.get_p2_position().x-150,model_.get_p1_position().y+50-236},1);
     }
     if (model_.get_p1_block())
     {

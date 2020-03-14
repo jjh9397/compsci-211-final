@@ -50,9 +50,9 @@ void Controller::on_key_down(ge211::Key key)
         //}
         //else
         //{
-            Input back = {"4", model_.frame};
+            Input back_1 = {"4", model_.frame};
             //back.timestamp = model_.frame;
-            p1_buffer.buffer.push_back(back);
+            p1_buffer.buffer.push_back(back_1);
         //} 
     }
     if (key == ge211::Key::code('e') && !model_.check_collision())
@@ -65,62 +65,61 @@ void Controller::on_key_down(ge211::Key key)
         //}
         //else
         //{
-           Input front = {"6", model_.frame};
+           Input front_1 = {"6", model_.frame};
            //front.timestamp = model_.frame;
-           p1_buffer.buffer.push_back(front);
+           p1_buffer.buffer.push_back(front_1);
         //}
         
     }
     if (key == ge211::Key::code('w') && !model_.check_collision())
     {
         w = true;
-        Input jump = {"9", model_.frame};
-        p1_buffer.buffer.push_back(jump);
+        Input jump_1 = {"9", model_.frame};
+        p1_buffer.buffer.push_back(jump_1);
     }
     if (key == ge211::Key::code('r'))
     {
-        Input attack = {"A", model_.frame};
+        Input attack_1 = {"A", model_.frame};
         //attack.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(attack);
+        p1_buffer.buffer.push_back(attack_1);
     }
     if (key == ge211::Key::code('t'))
     {
-        Input block = {"X", model_.frame};
+        Input block_1 = {"X", model_.frame};
         //block.timestamp = model_.frame;
-        p1_buffer.buffer.push_back(block);
+        p1_buffer.buffer.push_back(block_1);
     }
 
     if (key == ge211::Key::code(','))
     {
         comma = true;
-        Input back = {"4", model_.frame};
+        Input back_2 = {"4", model_.frame};
         //back.timestamp = model_.frame;
-        p2_buffer.buffer.push_back(back);
+        p2_buffer.buffer.push_back(back_2);
     }
     if (key == ge211::Key::code('/'))
     {
         slash = true;
-        Input front = {"6", model_.frame};
+        Input front_2 = {"6", model_.frame};
         //front.timestamp = model_.frame;
-        p2_buffer.buffer.push_back(front);
+        p2_buffer.buffer.push_back(front_2);
     }
     if (key == ge211::Key::code('.') && !model_.check_collision())
     {
         period = true;
-        Input jump = {"9", model_.frame};
-        p2_buffer.buffer.push_back(jump);
+        Input jump_2 = {"9", model_.frame};
+        p2_buffer.buffer.push_back(jump_2);
     }
     if (key == ge211::Key::code('m'))
     {
-        Input attack = {"A", model_.frame};
-        attack.timestamp = model_.frame;
-        p2_buffer.buffer.push_back(attack);
+        Input attack_2 = {"A", model_.frame};
+        p2_buffer.buffer.push_back(attack_2);
     }
     if (key == ge211::Key::code('n'))
     {
-        Input block = {"X", model_.frame};
+        Input block_2 = {"X", model_.frame};
         //block.timestamp = model_.frame;
-        p2_buffer.buffer.push_back(block);
+        p2_buffer.buffer.push_back(block_2);
     }
     if (key == ge211::Key::code('f'))
         quit();
@@ -303,7 +302,14 @@ void Controller::on_frame(double dt)
         }
         else
         {
-            model_.p2_stop_attack();
+            if (model_.access_p2_recovery() != 0)
+            {
+                model_.p2_attack();
+            }
+            else
+            {
+                model_.p2_stop_attack();
+            }
             model_.set_p1_stun(false);
         }
         if (p2_buffer.buffer.end()->timestamp>=model_.frame-15)
