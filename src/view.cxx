@@ -8,6 +8,7 @@ View::View(Model const &model)
     , bg("bg.png")
     , p1_sprite("p1.png")
     , p2_sprite("p2.png")
+    , block_sprite("block.png")
 {}
 
 ge211::Dimensions View::initial_window_dimensions() const
@@ -33,7 +34,14 @@ void View::draw(ge211::Sprite_set& set)
     {
         set.add_sprite(hurtbox_sprite, {model_.get_p2_position().x-100,model_.get_p1_position().y+50-236},1);
     }
-
+    if (model_.get_p1_block())
+    {
+        set.add_sprite(block_sprite, {model_.get_p1_position().x+50,model_.get_p1_position().y+50-300},1, ge211::Transform::flip_h());
+    }
+    if (model_.get_p2_block())
+    {
+        set.add_sprite(block_sprite, {model_.get_p2_position().x-50,model_.get_p2_position().y+50-300},1);
+    }
     set.add_sprite(health_red, {50,50},1,ge211::Transform::scale_x(model_.get_p1_health()));
     ge211::Transform custom=ge211::Transform{}.set_flip_v(true).scale_x(model_.get_p2_health());
     set.add_sprite(health_red, {730,50},1,custom);

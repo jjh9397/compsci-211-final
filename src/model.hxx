@@ -71,6 +71,8 @@ public:
 
     bool get_p1_active() const;
     bool get_p2_active() const;
+    bool get_p1_block() const;
+    bool get_p2_block() const;
 
     ge211::Position get_p1_position() const;
 

@@ -265,6 +265,7 @@ ge211::Position Model::get_p2_position() const
 {
     return p2_.hitbox.top_left();
 }
+
 bool Model::get_p1_active() const
 {
     return p1_.active;
@@ -273,6 +274,16 @@ bool Model::get_p1_active() const
 bool Model::get_p2_active() const
 {
     return p2_.active;
+}
+
+bool Model::get_p1_block() const
+{
+    return p1_.blocking;
+}
+
+bool Model::get_p2_block() const
+{
+    return p2_.blocking;
 }
 
 bool Model::game_over()
