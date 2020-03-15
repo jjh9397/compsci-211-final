@@ -272,9 +272,8 @@ void Controller::on_frame(double dt)
             else
             {
                 model_.p1_stop_attack();
+                model_.set_p2_stun(false);
             }
-            
-            model_.set_p2_stun(false);
         }
         if (p1_buffer.buffer.end()->timestamp>=model_.frame-15)
         {
@@ -339,8 +338,8 @@ void Controller::on_frame(double dt)
             else
             {
                 model_.p2_stop_attack();
+                model_.set_p1_stun(false);
             }
-            model_.set_p1_stun(false);
         }
         if (p2_buffer.buffer.end()->timestamp>=model_.frame-15)
         {
